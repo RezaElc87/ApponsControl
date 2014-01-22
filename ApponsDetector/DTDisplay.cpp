@@ -8,6 +8,7 @@
 #include "DisplayControl.h"
 #include "Wingdi.h"
 #include "Windows.h"
+#include <omp.h>
 
 
 
@@ -71,6 +72,10 @@ STDMETHODIMP CDTDisplay::put_MapStart(LONG newVal)
 {
 	// TODO: Add your implementation code here
 	m_mapStart = newVal;
+	if(m_mapStart < 0)
+		m_mapStart = 0;
+	if(m_mapStart > MAX_ADC)
+		m_mapStart = MAX_ADC;
 	SetWindowing();
 	return S_OK;
 }
@@ -85,6 +90,11 @@ STDMETHODIMP CDTDisplay::get_MapEnd(LONG* pVal)
 STDMETHODIMP CDTDisplay::put_MapEnd(LONG newVal)
 {
 	// TODO: Add your implementation code here
+	if(m_mapEnd < 0)
+		m_mapEnd = 0;
+	if(m_mapEnd > MAX_ADC)
+		m_mapEnd = MAX_ADC;
+
 	m_mapEnd = newVal;
 	SetWindowing();
 	return S_OK;
@@ -568,13 +578,28 @@ void CDTDisplay::LUTMap(LONG StartLine, LONG NumLines,BOOL bMoving)
 	{
 //		for(unsigned int j = StartLine;j<StartLine+NumLines;j++)
 		int YBase = StartLine;
-		for(unsigned int j = 0;j<NumLines;j++)
+#pragma omp parallel for 
+		for(int j = 0;j<NumLines;j++)
 		{
-			for(unsigned int i= 0;i<m_Width;i++)
-			{
-				m_pImageSrcObject->get_Pixel(m_Org_X+i,m_Org_Y+j+YBase,&Index);
-				m_pDisplayObject->put_Pixel(i,YBase+j,m_LUT[Index]);
+			long bytes = 0;
+			m_pImageSrcObject->get_BytesPerPixel(&bytes);
+			if(bytes == 2) {
+				long Addr = 0 ;
+				m_pImageSrcObject->get_ImageLineAddress(m_Org_Y + j +YBase, &Addr);
+				WORD* pSrc = (WORD*) Addr;
+				m_pDisplayObject->get_ImageLineAddress(j + YBase, &Addr);
+				BYTE* pDest = (BYTE*) Addr;
+				for (int i = 0; i < m_Width; i++) {
+					pDest[i] = m_LUT[pSrc[m_Org_X+i]];	
+				}
+			} else {
+				for(unsigned int i= 0;i<m_Width;i++)
+				{
+					m_pImageSrcObject->get_Pixel(m_Org_X+i,m_Org_Y+j+YBase,&Index);
+					m_pDisplayObject->put_Pixel(i,YBase+j,m_LUT[Index]);
+				}
 			}
+
 		}
 	}
 	else
@@ -819,12 +844,12 @@ LRESULT CDTDisplay::OnRefresh(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*
 	{
 		m_DisplayImage.Draw(m_hMemDC,&m_DrawRect);
 		InvalidateRect(&m_DrawRect,FALSE);
-	/*	BitBlt(this->GetDC(), 
+		BitBlt(this->GetDC(), 
                0,0, 
                 m_WndWidth,m_WndHeight,
                 m_hMemDC, 
                 0,0, 
-                SRCCOPY); */
+                SRCCOPY); 
 	}
 	return 0;
 }

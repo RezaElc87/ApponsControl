@@ -7,6 +7,7 @@
 #include "DTException.h"
 #include "Guids.h"
 #include "pixelorderconverter.h"
+#include <omp.h>
 
 // CDTImage
 #define IDT_TIMER1   0x10000
@@ -770,5 +771,13 @@ STDMETHODIMP CDTImage::put_DualScanMode(LONG newVal)
 {
 	// TODO: 在此添加实现代码
 	m_dualScanMode = newVal;
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::OpenMemImage(LONG width, LONG height, BYTE* data)
+{
+	// TODO: 在此添加实现代码
+
 	return S_OK;
 }

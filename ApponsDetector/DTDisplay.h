@@ -58,7 +58,7 @@ __interface IDTDisplay : public IDispatch
 	[id(17), helpstring("method Load")] HRESULT Load(BSTR FilePath);
 	[id(18), helpstring("method Save")] HRESULT Save(BSTR FilePath);
 	[propget, id(19), helpstring("property ObjectHandle")] HRESULT ObjectHandle([out, retval] IUnknown** pVal);
-
+	[id(20), helpstring("method Repaint")] HRESULT Repaint(void);
 };
 
 

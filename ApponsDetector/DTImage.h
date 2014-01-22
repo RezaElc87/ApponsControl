@@ -62,6 +62,7 @@ __interface IDTImage : public IDispatch
 //	[id(24)] HRESULT UnAdvise([in] long dwCookie);
 	[propget, id(23)] HRESULT DualScanMode([out, retval] LONG* pVal);
 	[propput, id(23)] HRESULT DualScanMode([in] LONG newVal);
+	[id(24)] HRESULT OpenMemImage(LONG width, LONG height, BYTE* data);
 };
 
 
@@ -309,4 +310,5 @@ public:
 
 	STDMETHOD(get_DualScanMode)(LONG* pVal);
 	STDMETHOD(put_DualScanMode)(LONG newVal);
+	STDMETHOD(OpenMemImage)(LONG width, LONG height, BYTE* data);
 };

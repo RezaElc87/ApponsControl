@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Wed Jan 08 23:13:23 2014
+/* at Wed Jan 22 01:09:45 2014
  */
 /* Compiler settings for _DTControl.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
@@ -1839,6 +1839,8 @@ EXTERN_C const IID IID_IDTDisplay;
         virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ObjectHandle( 
             /* [retval][out] */ IUnknown **pVal) = 0;
         
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Repaint( void) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -2010,6 +2012,9 @@ EXTERN_C const IID IID_IDTDisplay;
             IDTDisplay * This,
             /* [retval][out] */ IUnknown **pVal);
         
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Repaint )( 
+            IDTDisplay * This);
+        
         END_INTERFACE
     } IDTDisplayVtbl;
 
@@ -2139,6 +2144,9 @@ EXTERN_C const IID IID_IDTDisplay;
 #define IDTDisplay_get_ObjectHandle(This,pVal)	\
     ( (This)->lpVtbl -> get_ObjectHandle(This,pVal) ) 
 
+#define IDTDisplay_Repaint(This)	\
+    ( (This)->lpVtbl -> Repaint(This) ) 
+
 #endif /* COBJMACROS */
 
 
@@ -2261,6 +2269,11 @@ EXTERN_C const IID IID_IDTImage;
         
         virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_DualScanMode( 
             /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE OpenMemImage( 
+            /* [in] */ LONG width,
+            /* [in] */ LONG height,
+            /* [in] */ BYTE *data) = 0;
         
     };
     
@@ -2440,6 +2453,12 @@ EXTERN_C const IID IID_IDTImage;
             IDTImage * This,
             /* [in] */ LONG newVal);
         
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *OpenMemImage )( 
+            IDTImage * This,
+            /* [in] */ LONG width,
+            /* [in] */ LONG height,
+            /* [in] */ BYTE *data);
+        
         END_INTERFACE
     } IDTImageVtbl;
 
@@ -2571,6 +2590,9 @@ EXTERN_C const IID IID_IDTImage;
 
 #define IDTImage_put_DualScanMode(This,newVal)	\
     ( (This)->lpVtbl -> put_DualScanMode(This,newVal) ) 
+
+#define IDTImage_OpenMemImage(This,width,height,data)	\
+    ( (This)->lpVtbl -> OpenMemImage(This,width,height,data) ) 
 
 #endif /* COBJMACROS */
 
