@@ -155,13 +155,15 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)DTControl.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <PerUserRedirection>true</PerUserRedirection>
       <RegisterOutput>true</RegisterOutput>
     </Link>
     <PostBuildEvent>
       <Message>Performing registration</Message>
       <Command>regsvr32 /s /c "$(TargetPath)"</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>midl _DTControl.idl</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -414,6 +416,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DTControl.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="_DTControl.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

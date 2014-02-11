@@ -58,11 +58,11 @@ __interface IDTImage : public IDispatch
 	[propput, id(21), helpstring("property TimeOut")] HRESULT TimeOut([in] LONG newVal);
 	[propget, id(22), helpstring("property ExFrameTrigger")] HRESULT ExFrameTrigger([out, retval] LONG* pVal);
 	[propput, id(22), helpstring("property ExFrameTrigger")] HRESULT ExFrameTrigger([in] LONG newVal);
-//	[id(23)] HRESULT Advise([in] ICallBack* pCallback, [out] long* dwCookie);
-//	[id(24)] HRESULT UnAdvise([in] long dwCookie);
 	[propget, id(23)] HRESULT DualScanMode([out, retval] LONG* pVal);
 	[propput, id(23)] HRESULT DualScanMode([in] LONG newVal);
 	[id(24)] HRESULT OpenMemImage(LONG width, LONG height, BYTE* data);
+//	[id(25)] HRESULT Advise([in] IFrameReadyCallBack* pCallBack, [out] long* cookie);
+//	[id(26)] HRESULT UnAdvise([in] LONG cookie);
 };
 
 
@@ -79,6 +79,7 @@ __interface _IDTImageEvents
 	[id(3), helpstring("method Datalost")] HRESULT Datalost(LONG LostlineNum);
 	[id(4), helpstring("method DTError")] HRESULT DTError([in] LONG ErrorID, [in] BSTR ErrorInfo);
 };
+
 
 // CDTImage
 [
@@ -109,7 +110,6 @@ class ATL_NO_VTABLE CDTImage :
 	public IDataObjectImpl<CDTImage>,
 	public CComControl<CDTImage>,
 	public CEventManagerIF
-//	public IDispatchImpl<ICallBack, &__uuidof(ICallBack), &LIBID_DTControl, /* wMajor = */ 1, /* wMinor = */ 0>
 {
 public:
 
@@ -236,8 +236,6 @@ public:
 	STDMETHOD(Grab)(LONG FrameNum, LONG* bOK);
 	STDMETHOD(Snap)(LONG FrameNum, LONG* bOK);
 	STDMETHOD(PrintErrMsg)(LONG ErrID, BSTR* ErrMsg);
-//	STDMETHOD(Advise)(ICallBack* pCallback, long* cookie);
-//	STDMETHOD(UnAdvise)(long cookie);
 
 private:
 	ULONG	m_Timeout;
@@ -311,4 +309,6 @@ public:
 	STDMETHOD(get_DualScanMode)(LONG* pVal);
 	STDMETHOD(put_DualScanMode)(LONG newVal);
 	STDMETHOD(OpenMemImage)(LONG width, LONG height, BYTE* data);
+//	STDMETHOD(Advise)(IFrameReadyCallBack* pCallBack, long* cookie);
+//	STDMETHOD(UnAdvise)(LONG cookie);
 };

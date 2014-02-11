@@ -227,8 +227,8 @@ public:
 
 				}
 			}
-	//		if( m_Scale == 0)
-	//			DrawEdge(di.hdcDraw,&Rect,EDGE_ETCHED,BF_ADJUST|BF_FLAT|BF_TOP|BF_BOTTOM|BF_LEFT|BF_RIGHT);
+			if( m_Scale == 0)
+				DrawEdge(di.hdcDraw,&Rect,EDGE_ETCHED,BF_ADJUST|BF_FLAT|BF_TOP|BF_BOTTOM|BF_LEFT|BF_RIGHT);
 			return 0;
 		}
 

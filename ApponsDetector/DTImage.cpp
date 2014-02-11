@@ -587,7 +587,7 @@ STDMETHODIMP CDTImage::Stop(void)
 		}
 	}
 	CDTException Err(m_LastErrID);
-	DTError(Err.m_ERROR_ID,Err.m_ERROR_INFO);
+//	DTError(Err.m_ERROR_ID,Err.m_ERROR_INFO);
 	return S_OK;
 }
 
@@ -781,3 +781,19 @@ STDMETHODIMP CDTImage::OpenMemImage(LONG width, LONG height, BYTE* data)
 
 	return S_OK;
 }
+
+
+//STDMETHODIMP CDTImage::Advise(IFrameReadyCallBack* pCallBack, long* cookie)
+//{
+//	// TODO: 在此添加实现代码
+//
+//	return S_OK;
+//}
+//
+//
+//STDMETHODIMP CDTImage::UnAdvise(LONG cookie)
+//{
+//	// TODO: 在此添加实现代码
+//
+//	return S_OK;
+//}

@@ -341,7 +341,6 @@ STDMETHODIMP CDTDisplay::Load(BSTR FilePath)
 	
 	CHAR* pPath = _com_util::ConvertBSTRToString(FilePath);
 	m_DisplayImage.Load(pPath);
-	//m_DisplayImage.Load("D:\\DTControl 2\\DTControl\\Debug\\testpattern.jpg");
 	if(!m_DisplayImage.IsNull())
 	{
 		m_bOpened = TRUE;
@@ -815,13 +814,23 @@ LRESULT CDTDisplay::OnMouseMove(UINT /*uMsg*/, WPARAM wParam, LPARAM lParam, BOO
 	pt.x = LOWORD(lParam); 
 	pt.y  = HIWORD(lParam); 
 	DPtoLP(this->GetDC(),&pt,1);
+	
+	pt.x = (pt.x < m_DrawRect.left)? m_DrawRect.left: pt.x;
+	pt.x = (pt.x > m_DrawRect.right)? m_DrawRect.right: pt.x;
+	pt.y = (pt.y < m_DrawRect.top)? m_DrawRect.top: pt.y;
+	pt.y = (pt.y > m_DrawRect.bottom)? m_DrawRect.bottom: pt.y;
 
+	pt.x = (m_Width-1)*(pt.x - m_DrawRect.left)*1.0/(m_DrawRect.right - m_DrawRect.left);
+	pt.y = (m_Height-1)*(pt.y - m_DrawRect.top)*1.0/(m_DrawRect.bottom - m_DrawRect.top);
+
+	
 	if(m_pDataSrc)
 	{
 		//Gett he value from the data source
 		m_pImageSrcObject->get_Pixel(pt.x ,pt.y ,&Value);
 	}
-	this->MouseMove(wParam,lParam,Value);
+	//this->MouseMove(wParam,lParam,Value);
+	this->MouseMove(pt.x,pt.y,Value);
 	return 0;
 }
 LRESULT CDTDisplay::OnSize(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
