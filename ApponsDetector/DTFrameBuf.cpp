@@ -107,15 +107,18 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 				m_CurGrabFrameNum++;
 				//Rise the Event with the Frameready
 				ATLASSERT(m_pImageObject);
+
+				//ATLTRACE("m_CurFrameRowID is %d\n", m_CurFrameRowID);
 				m_pImageObject->put_ImageDataAddress((LONG)m_pRowAddr[m_CurFrameRowID]);
 				m_pEventManager->OnDTFrameReady(m_pRowAddr[m_CurFrameRowID],m_RowSize*m_FrameLength);
-
 				//	ATLTRACE("On FrameReady ENd \n");
 				//Updata the FrameRowID and SubFrame RowID
-				m_CurFrameRowID += m_FrameLength;
+				m_CurFrameRowID +=  m_FrameLength;
 				m_CurFrameRowID %= m_TotalRowsNum;
 				//If frame end the sub frame should be end too. So the m_CurFrameRowID == m_CurSubFrameRowID shoudl be correct
 				ATLASSERT(m_CurFrameRowID == m_CurSubFrameRowID);
+				
+				
 				
 			}
 		}

@@ -14,7 +14,7 @@ public:
     }
 
     virtual ~PixelOrderConverter() {}
-    virtual void process(IImageObject* src)=0;
+    virtual void process(IImageObject* src, LONG  RowID, LONG NumLines)=0;
 protected:
     int boardNum;
     int pixelNum;
@@ -33,7 +33,7 @@ public:
    //     delete[] buffer;
     }
 
-    virtual void process(IImageObject* src)
+    virtual void process(IImageObject* src, LONG  RowID, LONG NumLines)
     {
         long width = 0;
 		src->get_Width(&width);
@@ -42,9 +42,11 @@ public:
         
         assert(width == boardNum*pixelNum);
 		int i=0;
+		int startline = RowID;
+		int endline = RowID + NumLines;
 
-#pragma omp parallel for private(i) shared( width, height) 
-        for(i=0; i< height; i++) {
+#pragma omp parallel for private(i) shared( width, endline, startline) 
+        for(i = startline; i < endline; i++) {
 			long pline = 0;
 			src->get_ImageLineAddress(i, &pline);
             convertLine((WORD*)pline, width);

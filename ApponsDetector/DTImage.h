@@ -115,8 +115,8 @@ public:
 
 	CDTImage()
 	{
-		m_ImageHeight = 312;
-		m_ImageWidth = 312;
+		m_ImageHeight = 512;
+		m_ImageWidth = 512;
 		m_SubFrameHeight = m_ImageHeight;
 		m_bIsOpened = FALSE;
 		m_CardType = DT_USB;

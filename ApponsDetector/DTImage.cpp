@@ -26,6 +26,7 @@ STDMETHODIMP CDTImage::put_ImgHeight(LONG newVal)
 	if(!m_bIsOpened)
 	{
 		m_ImageHeight = newVal;
+		m_SubFrameHeight = m_ImageHeight;
 	}
 	return S_OK;
 }
@@ -161,13 +162,7 @@ STDMETHODIMP CDTImage::Open(LONG* b_OK)
 		*b_OK = TRUE;
 		return S_OK;
 	}
-	//Check the SubFrameHeight consistance. If it cannot divided, then reset it same as frame height;
 
-
-	if( (m_ImageHeight%m_SubFrameHeight) != 0)
-	{
-		m_SubFrameHeight = m_ImageHeight;
-	}
 	SubFrameNum = m_ImageHeight/m_SubFrameHeight;
 	//Get DTFrameBuffer
 	m_pFrameBuf = m_FrameBufFactory.GetDTFrameBuf(this,m_ImageWidth,m_ImageHeight,m_BytesPerPixel,SubFrameNum);
@@ -480,6 +475,13 @@ STDMETHODIMP CDTImage::put_SubFrameHeight(LONG newVal)
 {
 	// TODO: Add your implementation code here
 	m_SubFrameHeight = newVal;
+		//Check the SubFrameHeight consistance. If it cannot divided, then reset it same as frame height;
+
+
+	if( (m_ImageHeight%m_SubFrameHeight) != 0)
+	{
+		m_SubFrameHeight = m_ImageHeight;
+	}
 	return S_OK;
 }
 void CDTImage::ResetAllDTPPacket()
@@ -511,11 +513,14 @@ void CDTImage::OnDTFrameReady(BYTE* pSrc, DWORD Size)
 	//m_FrameNum is the total frame number want to take
 	//if ==0 menas continues untill user stop
 	if(m_dualScanMode) {
-		//::MessageBox( GetForegroundWindow(), _T("Helllo World"), NULL, MB_OK );
-		int boardNum = m_ImageWidth/64; //every board have 64 bits
-		DualToSingleConverter converter(boardNum, 64);
-		converter.process(m_pImageObject);
+			int boardNum = m_ImageWidth/64; //every board have 64 bits
+			DualToSingleConverter converter(boardNum, 64);
+			converter.process(m_pImageObject, 0, m_ImageHeight);
 	}
+			//long pBase = 0;
+			//m_pImageObject->get_ImageDataAddress(&pBase);
+			//ATLTRACE("Frame m_pImageObject is %x\n", pBase );
+
 	if(m_FrameNum>0)//Snap or grab operation with Num
 	{
 		m_CurFrameCount++;
@@ -555,6 +560,17 @@ void CDTImage::OnDTFrameReady(BYTE* pSrc, DWORD Size)
 };
 void CDTImage::OnDTSubFrameReady(LONG  RowID, LONG NumLines,BOOL bLastFrame)
 {
+	//In sub frame ready function cannot use m_pImageObject to process data
+	//because m_pImageObject is the current Ready Frame. But the SubFrame Ready
+	// is using current processing frame which one frame ahead the Ready frame
+		//if(m_dualScanMode) {
+		//	int boardNum = m_ImageWidth/64; //every board have 64 bits
+		//	DualToSingleConverter converter(boardNum, 64);
+		//	converter.process(m_pImageObject, RowID, NumLines);
+		//	long pBase = 0;
+		//	m_pImageObject->get_ImageDataAddress(&pBase);
+		//	ATLTRACE("SubFrame m_pImageObject is %x\n", pBase );
+		//}
 	//Caclute the Start Line , Numof lines and left blocks, and the lastblock flag
 		if(!m_pDataSrc->GetStopFlag())
 		{//If the flag still not set then post the Frame Read Message
