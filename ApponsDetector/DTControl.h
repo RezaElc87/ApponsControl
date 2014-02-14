@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Fri Feb 14 10:50:22 2014
+/* at Fri Feb 14 11:51:14 2014
  */
 /* Compiler settings for _DTControl.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
@@ -206,7 +206,7 @@ EXTERN_C const IID IID_IDTDisplayControl;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("6CDC46F2-4137-4093-AE9F-4443633F6DA7")
+    MIDL_INTERFACE("5A79B1CB-FF34-4F4F-A394-4972066A5763")
     IDTDisplayControl : public IDispatch
     {
     public:
@@ -367,7 +367,7 @@ EXTERN_C const IID IID_IDTDetector;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("3648F72D-1F1C-4D6A-80C5-53DEAA1359AB")
+    MIDL_INTERFACE("7C13A54F-69C0-4F51-A48D-F55CE086F72D")
     IDTDetector : public IDispatch
     {
     public:
@@ -686,7 +686,7 @@ EXTERN_C const IID IID_IDTCommanderF3;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("49422A4C-63E0-4674-9073-5867DF5FECDC")
+    MIDL_INTERFACE("A164B205-1A1E-4345-A6F6-38D4715EC7FB")
     IDTCommanderF3 : public IDispatch
     {
     public:
@@ -1449,7 +1449,7 @@ EXTERN_C const IID IID_IImageObject;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("2668B542-3FBD-46B8-A1DE-FF9CD383325D")
+    MIDL_INTERFACE("564FBD53-2CF3-47D8-AD62-670840E804BE")
     IImageObject : public IDispatch
     {
     public:
@@ -2169,7 +2169,7 @@ EXTERN_C const IID IID_IDTImage;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("DE232739-9353-452B-8AE3-DACC5DF58486")
+    MIDL_INTERFACE("05A512FA-9E1F-4F7D-BE82-6FBECE81A17D")
     IDTImage : public IDispatch
     {
     public:
@@ -2626,7 +2626,7 @@ EXTERN_C const IID DIID__IDTDisplayControlEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("B71C75E1-3CB0-40E7-A8B1-6FCEE7A479CF")
+    MIDL_INTERFACE("51F345B5-044F-49F2-A824-59B2869CEF23")
     _IDTDisplayControlEvents : public IDispatch
     {
     };
@@ -2726,7 +2726,7 @@ EXTERN_C const CLSID CLSID_CDTDisplayControl;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("DCE3040A-003A-4325-9FAE-C5A9DA79203C")
+class DECLSPEC_UUID("14B6C482-806F-4171-AEA4-FB424E07A758")
 CDTDisplayControl;
 #endif
 
@@ -2741,7 +2741,7 @@ EXTERN_C const IID DIID__IDTDetectorEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("A5EC5E3E-B102-46A7-B589-1B6ADD9EAC03")
+    MIDL_INTERFACE("B3E172CD-8F54-4910-AA06-61B8D3ECD986")
     _IDTDetectorEvents : public IDispatch
     {
     };
@@ -2841,7 +2841,7 @@ EXTERN_C const CLSID CLSID_CDTDetector;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("D3120961-C570-471D-B62E-5B2636502D85")
+class DECLSPEC_UUID("81B889F3-33FC-40CD-A98B-4487723F5A3B")
 CDTDetector;
 #endif
 
@@ -2856,7 +2856,7 @@ EXTERN_C const IID DIID__IDTCommanderF3Events;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("6A7003E6-BA52-45D8-8ACE-1700CB01E70A")
+    MIDL_INTERFACE("3F2A6451-EC6C-4948-9C07-7764FA64A894")
     _IDTCommanderF3Events : public IDispatch
     {
     };
@@ -2956,7 +2956,7 @@ EXTERN_C const CLSID CLSID_CDTCommanderF3;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("7D934547-7258-4C06-9AD3-A3143E9056CA")
+class DECLSPEC_UUID("B08859A2-D75E-4B6D-8C13-A80DAD7BA087")
 CDTCommanderF3;
 #endif
 
@@ -2964,7 +2964,7 @@ EXTERN_C const CLSID CLSID_CImageObject;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("C3BDF6C3-7738-41FE-97F9-618B28F4F82B")
+class DECLSPEC_UUID("25874CDE-5C8A-486D-855D-C8DE1FFBEE8A")
 CImageObject;
 #endif
 
@@ -2979,7 +2979,7 @@ EXTERN_C const IID DIID__IDTDisplayEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("8148D9F9-5ED2-4373-AB88-519E0C22B536")
+    MIDL_INTERFACE("CD1AAF81-A669-47B7-94A0-5A2A1FBA4439")
     _IDTDisplayEvents : public IDispatch
     {
     };
@@ -3094,7 +3094,7 @@ EXTERN_C const IID DIID__IDTImageEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("340DAB3D-DAC5-4E95-BE22-677A68039526")
+    MIDL_INTERFACE("41BE7653-30F4-461F-87A1-4BAB1F8C8B33")
     _IDTImageEvents : public IDispatch
     {
     };
@@ -3194,7 +3194,7 @@ EXTERN_C const CLSID CLSID_CDTImage;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("ADDEC18D-6A72-4873-9BE7-B708463B8ADC")
+class DECLSPEC_UUID("137E0C10-17BC-4F16-BFFE-5C1E7725C8EA")
 CDTImage;
 #endif
 #endif /* __DTControl_LIBRARY_DEFINED__ */

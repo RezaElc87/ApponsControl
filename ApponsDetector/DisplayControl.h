@@ -6,7 +6,8 @@
 // IDisplayControl
 [
 	object,
-	uuid(6CDC46F2-4137-4093-AE9F-4443633F6DA7),
+//	uuid(6CDC46F2-4137-4093-AE9F-4443633F6DA7),
+	uuid(5A79B1CB-FF34-4F4F-A394-4972066A5763),
 	dual,
 	helpstring("IDTDisplayControl Interface"),
 	pointer_default(unique)
@@ -27,7 +28,8 @@ __interface IDTDisplayControl : public IDispatch
 
 // _IDisplayControlEvents
 [
-	uuid("B71C75E1-3CB0-40E7-A8B1-6FCEE7A479CF"),
+	//uuid("B71C75E1-3CB0-40E7-A8B1-6FCEE7A479CF"),
+	uuid(51F345B5-044F-49F2-A824-59B2869CEF23),
 	dispinterface,
 	helpstring("_IDTDisplayControlEvents Interface")
 ]
@@ -42,7 +44,8 @@ __interface _IDTDisplayControlEvents
 	vi_progid("DTControl.DTDisplayControl"),
 	progid("DTControl.DTDisplayControl.1"),
 	version(1.0),
-	uuid("DCE3040A-003A-4325-9FAE-C5A9DA79203C"),
+	//uuid("DCE3040A-003A-4325-9FAE-C5A9DA79203C"),
+	uuid("14B6C482-806F-4171-AEA4-FB424E07A758"),
 	helpstring("DTDisplayControl Class"),
 	event_source("com"),
 	support_error_info(IDTDisplayControl),

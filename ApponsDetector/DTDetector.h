@@ -9,7 +9,8 @@
 // IDTDetector
 [
 	object,
-	uuid(3648F72D-1F1C-4D6A-80C5-53DEAA1359AB),
+	//uuid(3648F72D-1F1C-4D6A-80C5-53DEAA1359AB),
+	uuid(7C13A54F-69C0-4F51-A48D-F55CE086F72D),
 	dual,
 	helpstring("IDTDetector Interface"),
 	pointer_default(unique)
@@ -41,7 +42,8 @@ __interface IDTDetector : public IDispatch
 
 // _IDTDetectorEvents
 [
-	uuid("A5EC5E3E-B102-46A7-B589-1B6ADD9EAC03"),
+	//uuid("A5EC5E3E-B102-46A7-B589-1B6ADD9EAC03"),
+	uuid("B3E172CD-8F54-4910-AA06-61B8D3ECD986"),
 	dispinterface,
 	helpstring("_IDTDetectorEvents Interface")
 ]
@@ -57,7 +59,8 @@ __interface _IDTDetectorEvents
 	vi_progid("DTControl.DTDetector"),
 	progid("DTControl.DTDetector.1"),
 	version(1.0),
-	uuid("D3120961-C570-471D-B62E-5B2636502D85"),
+	//uuid("D3120961-C570-471D-B62E-5B2636502D85"),
+	uuid("81B889F3-33FC-40CD-A98B-4487723F5A3B"),
 	helpstring("DTDetector Class"),
 	event_source("com"),
 	support_error_info(IDTDetector),

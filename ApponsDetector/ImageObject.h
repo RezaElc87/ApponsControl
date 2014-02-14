@@ -7,7 +7,8 @@
 // IImageObject
 [
 	object,
-	uuid("2668B542-3FBD-46B8-A1DE-FF9CD383325D"),
+	//uuid("2668B542-3FBD-46B8-A1DE-FF9CD383325D"),
+	uuid("564FBD53-2CF3-47D8-AD62-670840E804BE"),
 	dual,	helpstring("IImageObject Interface"),
 	pointer_default(unique)
 ]
@@ -42,7 +43,8 @@ __interface IImageObject : IDispatch
 	vi_progid("DTControl.ImageObject"),
 	progid("DTControl.ImageObject.1"),
 	version(1.0),
-	uuid("C3BDF6C3-7738-41FE-97F9-618B28F4F82B"),
+	//uuid("C3BDF6C3-7738-41FE-97F9-618B28F4F82B"),
+	uuid(25874CDE-5C8A-486D-855D-C8DE1FFBEE8A),
 	helpstring("ImageObject Class")
 ]
 class ATL_NO_VTABLE CImageObject : 

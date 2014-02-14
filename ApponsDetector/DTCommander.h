@@ -8,7 +8,8 @@
 // IDTCommanderF3
 [
 	object,
-	uuid(49422A4C-63E0-4674-9073-5867DF5FECDC),
+//	uuid(49422A4C-63E0-4674-9073-5867DF5FECDC),
+	uuid(A164B205-1A1E-4345-A6F6-38D4715EC7FB),
 	dual,
 	helpstring("IDTCommanderF3 Interface"),
 	pointer_default(unique)
@@ -87,7 +88,8 @@ __interface IDTCommanderF3 : public IDispatch
 
 // _IDTCommanderEvents
 [
-	uuid("6A7003E6-BA52-45D8-8ACE-1700CB01E70A"),
+	//uuid("6A7003E6-BA52-45D8-8ACE-1700CB01E70A"),
+	uuid("3F2A6451-EC6C-4948-9C07-7764FA64A894"),
 	dispinterface,
 	helpstring("_IDTCommanderF3Events Interface")
 ]
@@ -102,7 +104,8 @@ __interface _IDTCommanderF3Events
 	vi_progid("DTControl.DTCommanderF3"),
 	progid("DTControl.DTCommanderF3.1"),
 	version(1.0),
-	uuid("7D934547-7258-4C06-9AD3-A3143E9056CA"),
+	//uuid("7D934547-7258-4C06-9AD3-A3143E9056CA"),
+	uuid("B08859A2-D75E-4B6D-8C13-A80DAD7BA087"),
 	helpstring("DTCommanderF3 Class"),
 	event_source("com"),
 	support_error_info(IDTCommanderF3),

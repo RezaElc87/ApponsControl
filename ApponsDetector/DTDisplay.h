@@ -64,7 +64,8 @@ __interface IDTDisplay : public IDispatch
 
 // _IDTDisplayEvents
 [
-	uuid("8148D9F9-5ED2-4373-AB88-519E0C22B536"),
+	//uuid("8148D9F9-5ED2-4373-AB88-519E0C22B536"),
+	uuid("CD1AAF81-A669-47B7-94A0-5A2A1FBA4439"),
 	dispinterface,
 	helpstring("_IDTDisplayEvents Interface")
 ]

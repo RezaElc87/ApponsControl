@@ -20,7 +20,8 @@
 // IDTImage
 [
 	object,
-	uuid(DE232739-9353-452B-8AE3-DACC5DF58486),
+	//uuid(DE232739-9353-452B-8AE3-DACC5DF58486),
+	uuid("05A512FA-9E1F-4F7D-BE82-6FBECE81A17D"),
 	dual,
 	helpstring("IDTImage Interface"),
 	pointer_default(unique)
@@ -68,7 +69,8 @@ __interface IDTImage : public IDispatch
 
 // _IDTImageEvents
 [
-	uuid("340DAB3D-DAC5-4E95-BE22-677A68039526"),
+	//uuid("340DAB3D-DAC5-4E95-BE22-677A68039526"),
+	uuid("41BE7653-30F4-461F-87A1-4BAB1F8C8B33"),
 	dispinterface,
 	helpstring("_IDTImageEvents Interface")
 ]
@@ -88,7 +90,8 @@ __interface _IDTImageEvents
 	vi_progid("DTControl.DTImage"),
 	progid("DTControl.DTImage.1"),
 	version(1.0),
-	uuid("ADDEC18D-6A72-4873-9BE7-B708463B8ADC"),
+	//uuid("ADDEC18D-6A72-4873-9BE7-B708463B8ADC"),
+	uuid("137E0C10-17BC-4F16-BFFE-5C1E7725C8EA"),
 	helpstring("DTImage Class"),
 	event_source("com"),
 	support_error_info(IDTImage),
