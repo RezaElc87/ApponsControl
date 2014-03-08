@@ -31,6 +31,8 @@ __interface IImageObject : IDispatch
 	[id(13), helpstring("method RowAverage")] HRESULT RowAverage(LONG* pAvg);
 	[id(14), helpstring("method ColNoise")] HRESULT ColNoise([out] FLOAT* pNoise);
 	[id(15), helpstring("method RowNoise")] HRESULT RowNoise([out] FLOAT* pNoise);
+	[id(16)] HRESULT DoRowStatistic(void);
+	[id(17)] HRESULT DoColStatistic(void);
 };
 
 
@@ -95,6 +97,13 @@ private:
 	LONG* m_YTable;
 	BYTE* m_DataBase;
 
+	double* m_ColMax;
+	double* m_ColAvg;
+	double* m_ColMin;
+	
+	double* m_RowAvg;
+	double* m_RowMax;
+    double* m_RowMin;
 	
 public:
 	STDMETHOD(Open)(LONG Width, LONG Height, LONG BytesPerPixel);
@@ -107,5 +116,7 @@ public:
 	STDMETHOD(RowAverage)(LONG* pAvg);
 	STDMETHOD(ColNoise)(FLOAT* pNoise);
 	STDMETHOD(RowNoise)(FLOAT* pNoise);
+	STDMETHOD(DoRowStatistic)(void);
+	STDMETHOD(DoColStatistic)(void);
 };
 

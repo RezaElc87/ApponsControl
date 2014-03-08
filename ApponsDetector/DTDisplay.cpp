@@ -551,7 +551,7 @@ void CDTDisplay::SetWindowing()
 	}
 	else//Start > End
 	{
-		for(int i=m_mapStart;i<MAX_ADC;i++)
+		for(i=m_mapStart;i<MAX_ADC;i++)
 		{
 			m_LUT[i] = 0;
 		}

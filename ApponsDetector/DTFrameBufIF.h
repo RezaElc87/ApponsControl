@@ -1,5 +1,6 @@
 #pragma once
 #include "ImageObject.h"
+#include "LineProcessor.h"
 class CEventManagerIF;
 
 class CDTFrameBufIF
@@ -16,4 +17,9 @@ public:
 	virtual unsigned int GetBytesPerPixel()=0;
 	virtual void SetImageObject(IImageObject* pImageObject)=0;
 	virtual void Reset()=0;
+
+	virtual void setGainProcessor(CGainProcessor* processor) = 0;
+	virtual void setOffsetProcessor(COffsetProcessor* processor) = 0;
+	virtual void setPixelOrderProcessor(CPixelOrderProcessor* processor) = 0;
+	virtual void setArrayProcessor(CArrayCorrectionProcessor* processor) = 0;
 };

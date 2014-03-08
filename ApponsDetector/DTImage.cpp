@@ -813,3 +813,162 @@ STDMETHODIMP CDTImage::OpenMemImage(LONG width, LONG height, BYTE* data)
 //
 //	return S_OK;
 //}
+
+
+STDMETHODIMP CDTImage::get_OffsetEnable(BYTE* pVal)
+{
+	*pVal = m_bOffsetEnable;
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::put_OffsetEnable(BYTE newVal)
+{
+	m_bOffsetEnable = newVal;
+	if(m_bGainEnable) {
+		m_pFrameBuf->setOffsetProcessor(&m_offsetProcessor);
+	} else {
+		m_pFrameBuf->setOffsetProcessor(NULL);
+	}
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::get_GainEnable(BYTE* pVal)
+{
+	*pVal = m_bGainEnable;
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::put_GainEnable(BYTE newVal)
+{
+	m_bGainEnable = newVal;
+	if(m_bGainEnable) {
+		m_pFrameBuf->setGainProcessor(&m_gainProcessor);
+	} else {
+		m_pFrameBuf->setGainProcessor(NULL);
+	}
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::get_PixelOrderEnable(BYTE* pVal)
+{
+	*pVal = m_bPixelOrderEnable;
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::put_PixelOrderEnable(BYTE newVal)
+{
+	m_bPixelOrderEnable = newVal;
+	if(m_bPixelOrderEnable) {
+		m_pFrameBuf->setPixelOrderProcessor(&m_pixelOrderProcessor);
+	} else {
+		m_pFrameBuf->setPixelOrderProcessor(NULL);
+	}
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::OffsetCalibration(void)
+{
+	//Shut down x-ray and snap one picture
+    long bOk;
+	Snap(1,&bOk);
+	//get the avg of each col
+	long width;
+	m_pImageObject->get_Width(&width);
+	long pAvg;
+	m_pImageObject->DoColStatistic();
+	m_pImageObject->ColAverage(&pAvg);
+	long i=0;
+	for(i=0; i++; i < width)
+		m_offsetProcessor.setOffset(((double*)pAvg)[i], i);
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::GainCalibration(LONG target)
+{
+	long bOk;
+	put_OffsetEnable(TRUE);
+	Snap(1,&bOk);
+	long width;
+	m_pImageObject->get_Width(&width);
+	long i=0;
+	long pAvg;
+	m_pImageObject->DoColStatistic();
+	m_pImageObject->ColAverage(&pAvg);
+	double val;
+	long flag = target;
+	if(0 == flag) {
+		target = ((double*)pAvg)[0];
+		for(i=0; i++; i < width) {
+			val = ((double*)pAvg)[i];
+			if (val< target)
+				target = val;
+		}
+	}else if(1 == flag) {
+			for(i=0; i++; i < width) {
+				val += ((double*)pAvg)[i];
+			}
+			target = val/width;
+	}else if(2 == flag) {
+		target = ((double*)pAvg)[0];
+		for(i=0; i++; i < width) {
+			val = ((double*)pAvg)[i];
+			if (val> target)
+				target = val;
+		}
+		target = val/width;
+	}
+
+	for(i=0; i++; i < width) {
+		m_gainProcessor.setGain(target/((double*)pAvg)[i], i);
+	}
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::GainCalSnap(void)
+{
+	long bOk;
+	//put_OffsetEnable(TRUE);
+	Snap(1,&bOk);
+	m_pImageObject->DoColStatistic();
+	long width;
+	m_pImageObject->get_Width(&width);
+	long pAvg;
+	m_pImageObject->ColAverage(&pAvg);
+	m_arrayProcessor.addData((WORD*)pAvg, width);
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::GainArrayCal(void)
+{
+	m_arrayProcessor.reset();
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::get_arrayCorrectionEnable(BYTE* pVal)
+{
+	*pVal = m_arrayCorrectionEnable;
+
+	return S_OK;
+}
+
+
+STDMETHODIMP CDTImage::put_arrayCorrectionEnable(BYTE newVal)
+{
+	m_arrayCorrectionEnable = newVal;
+	if(m_arrayCorrectionEnable) {
+		m_pFrameBuf->setPixelOrderProcessor(&m_pixelOrderProcessor);
+	} else {
+		m_pFrameBuf->setPixelOrderProcessor(NULL);
+	}
+	return S_OK;
+}

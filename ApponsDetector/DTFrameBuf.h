@@ -1,5 +1,6 @@
 #pragma once
 #include "dtframebufif.h"
+#include "LineProcessor.h"
 typedef BYTE* PBYTE;
 class CEventManagerIF;
 class CDTFrameBuf :
@@ -32,6 +33,12 @@ private:
 	
 	CEventManagerIF* m_pEventManager;
 	IImageObject*	m_pImageObject;
+
+
+	CGainProcessor*  m_gainProcessor;
+	COffsetProcessor*  m_offsetProcessor;
+	CPixelOrderProcessor*  m_pixelOrderProcessor;
+	CArrayCorrectionProcessor* m_arrayCorrectionProcessor;
 public:
 	void AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd);
 	bool Create(CEventManagerIF* pEventManager,unsigned int FrameWidth, unsigned int FrameLength, unsigned int BytesPerPixel, unsigned int SubFrameNum, unsigned int FrameBufNum);
@@ -41,5 +48,9 @@ public:
 	unsigned int  GetBytesPerPixel();
 	void SetImageObject(IImageObject* pImageObject);
 	void Reset();
-	
+
+	void setGainProcessor(CGainProcessor* processor);
+	void setOffsetProcessor(COffsetProcessor* processor);
+	void setPixelOrderProcessor(CPixelOrderProcessor* processor);
+	void setArrayProcessor(CArrayCorrectionProcessor* processor);
 };

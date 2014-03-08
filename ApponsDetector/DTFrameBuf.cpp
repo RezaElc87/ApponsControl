@@ -21,7 +21,11 @@ CDTFrameBuf::CDTFrameBuf(void)
   m_RowSize(0),
   m_GrabFrameNumTotal(0),
   m_CurGrabFrameNum(0),
-  m_pImageObject(NULL)
+  m_pImageObject(NULL),
+  m_gainProcessor(NULL),
+  m_offsetProcessor(NULL),
+  m_pixelOrderProcessor(NULL),
+  m_arrayCorrectionProcessor(NULL)
 {
 
 }
@@ -33,6 +37,27 @@ CDTFrameBuf::~CDTFrameBuf(void)
 	if(m_pData)
 		delete m_pData;
 }
+
+void CDTFrameBuf::setArrayProcessor(CArrayCorrectionProcessor* processor)
+{
+	m_arrayCorrectionProcessor = processor;
+}
+
+void CDTFrameBuf::setGainProcessor(CGainProcessor* processor)
+{
+	m_gainProcessor = processor;
+}
+
+void CDTFrameBuf::setOffsetProcessor(COffsetProcessor* processor)
+{
+	m_offsetProcessor = processor;
+}
+
+void CDTFrameBuf::setPixelOrderProcessor(CPixelOrderProcessor* processor)
+{
+	m_pixelOrderProcessor = processor;
+}
+
 void CDTFrameBuf::Reset()//Reset the counter 
 {
   m_CurFrameRowID = 0;
@@ -46,7 +71,7 @@ void CDTFrameBuf::SetGrabFrameNum(unsigned int Num)//Setup hownay frame want to 
 	m_GrabFrameNumTotal = Num;
 }
 void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
-{//The addline maybe call serval time for one line data, if it is the last part
+{//The addline maybe call severval time for one line data, if it is the last part
 	// of the line the blineend should be true
 	
 	m_pEventManager->OnNewDataComimg(Size);
@@ -60,7 +85,7 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 	}
 	//Check the Size with the FrameWidth, choose the smaller one as copy length
 	unsigned int cpSize;
-	//Determine homany bytes should copy
+	//Determine how many bytes should copy
 	unsigned int MaxSize = m_RowSize - m_CurLinePos;
 	
 	if(MaxSize>0)//if there is space in current line
@@ -71,11 +96,21 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 		{
 			cpSize = (m_FrameWidth*2 > Size) ? Size:m_FrameWidth*2;
 		}
-		//Copy the data the the current avalible line
+		//Copy the data the the current available line
 		char* pCurLineAddr = (char*)m_pRowAddr[m_CurRowID] + m_CurLinePos;
 		try
 		{
     		memcpy(pCurLineAddr,pSrc,cpSize);
+			if(m_pixelOrderProcessor)
+				m_pixelOrderProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
+			if(m_arrayCorrectionProcessor) {
+				m_arrayCorrectionProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
+			} else {
+				if(m_gainProcessor)
+					m_gainProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
+				if(m_offsetProcessor)
+					m_offsetProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
+			}
 		}
 		catch(...)
 		{
@@ -86,6 +121,7 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 		//Update the CurLine Addr;
 	if(bLineEnd)
 	{
+		//one line is ready
 		m_CurLinePos=0;
 		m_CurRowID++;
 		m_CurRowID %= m_TotalRowsNum;
@@ -117,9 +153,7 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 				m_CurFrameRowID %= m_TotalRowsNum;
 				//If frame end the sub frame should be end too. So the m_CurFrameRowID == m_CurSubFrameRowID shoudl be correct
 				ATLASSERT(m_CurFrameRowID == m_CurSubFrameRowID);
-				
-				
-				
+	
 			}
 		}
 	}

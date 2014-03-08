@@ -15,7 +15,7 @@
 #include "DTPPacketFactory.h"
 #include "dtpqueuefactory.h"
 #include "dtdatasrcfactory.h"
-
+#include "LineProcessor.h"
 
 // IDTImage
 [
@@ -64,6 +64,18 @@ __interface IDTImage : public IDispatch
 	[id(24)] HRESULT OpenMemImage(LONG width, LONG height, BYTE* data);
 //	[id(25)] HRESULT Advise([in] IFrameReadyCallBack* pCallBack, [out] long* cookie);
 //	[id(26)] HRESULT UnAdvise([in] LONG cookie);
+	[propget, id(25)] HRESULT OffsetEnable([out, retval] BYTE* pVal);
+	[propput, id(25)] HRESULT OffsetEnable([in] BYTE newVal);
+	[propget, id(26)] HRESULT GainEnable([out, retval] BYTE* pVal);
+	[propput, id(26)] HRESULT GainEnable([in] BYTE newVal);
+	[propget, id(27)] HRESULT PixelOrderEnable([out, retval] BYTE* pVal);
+	[propput, id(27)] HRESULT PixelOrderEnable([in] BYTE newVal);
+	[id(28)] HRESULT OffsetCalibration(void);
+	[id(29)] HRESULT GainCalibration(LONG target);
+	[id(30)] HRESULT GainCalSnap(void);
+	[id(31)] HRESULT GainArrayCal(void);
+	[propget, id(32)] HRESULT arrayCorrectionEnable([out, retval] BYTE* pVal);
+	[propput, id(32)] HRESULT arrayCorrectionEnable([in] BYTE newVal);
 };
 
 
@@ -136,6 +148,10 @@ public:
 		m_bWindowOnly = TRUE;
 		m_bExFrameTrigger = FALSE;
 		m_Timeout = 10000;
+		m_bOffsetEnable -  FALSE;
+		m_bGainEnable = FALSE;
+		m_bPixelOrderEnable = FALSE;
+		m_arrayCorrectionEnable = FALSE;
 		for(int i = 0;i<SINK_SIZE;i++)
 			m_SinkArray[i] = NULL;
 	}
@@ -273,7 +289,16 @@ private:
 	IImageObject*	m_pImageObject;
 	long			m_dualScanMode;
 
+	BOOL			m_bOffsetEnable;
+	BOOL			m_bGainEnable;
+	BOOL			m_bPixelOrderEnable;
+	BOOL			m_arrayCorrectionEnable;
 
+	CGainProcessor  m_gainProcessor;
+	COffsetProcessor  m_offsetProcessor;
+	CPixelOrderProcessor  m_pixelOrderProcessor;
+
+	CArrayCorrectionProcessor m_arrayProcessor;
 public:
 	STDMETHOD(get_SubFrameHeight)(LONG* pVal);
 	STDMETHOD(put_SubFrameHeight)(LONG newVal);
@@ -314,4 +339,16 @@ public:
 	STDMETHOD(OpenMemImage)(LONG width, LONG height, BYTE* data);
 //	STDMETHOD(Advise)(IFrameReadyCallBack* pCallBack, long* cookie);
 //	STDMETHOD(UnAdvise)(LONG cookie);
+	STDMETHOD(get_OffsetEnable)(BYTE* pVal);
+	STDMETHOD(put_OffsetEnable)(BYTE newVal);
+	STDMETHOD(get_GainEnable)(BYTE* pVal);
+	STDMETHOD(put_GainEnable)(BYTE newVal);
+	STDMETHOD(get_PixelOrderEnable)(BYTE* pVal);
+	STDMETHOD(put_PixelOrderEnable)(BYTE newVal);
+	STDMETHOD(OffsetCalibration)(void);
+	STDMETHOD(GainCalibration)(LONG target);
+	STDMETHOD(GainCalSnap)(void);
+	STDMETHOD(GainArrayCal)(void);
+	STDMETHOD(get_arrayCorrectionEnable)(BYTE* pVal);
+	STDMETHOD(put_arrayCorrectionEnable)(BYTE newVal);
 };
