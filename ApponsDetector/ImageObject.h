@@ -61,6 +61,13 @@ public:
 		m_XTable = NULL;
 		m_YTable = NULL;
 		m_DataBase = NULL;
+		m_ColMax = NULL;
+		m_ColAvg = NULL;
+		m_ColMin = NULL;
+
+		m_RowAvg = NULL;
+		m_RowMax = NULL;
+		m_RowMin = NULL;
 	}
 
 

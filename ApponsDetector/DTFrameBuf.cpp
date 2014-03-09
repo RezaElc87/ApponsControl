@@ -106,10 +106,10 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 			if(m_arrayCorrectionProcessor) {
 				m_arrayCorrectionProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
 			} else {
-				if(m_gainProcessor)
-					m_gainProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
 				if(m_offsetProcessor)
 					m_offsetProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
+				if(m_gainProcessor)
+					m_gainProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
 			}
 		}
 		catch(...)

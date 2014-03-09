@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Sat Mar 08 23:26:53 2014
+/* at Sun Mar 09 14:55:59 2014
  */
 /* Compiler settings for _DTControl.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
@@ -1511,6 +1511,10 @@ EXTERN_C const IID IID_IImageObject;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowNoise( 
             /* [out] */ FLOAT *pNoise) = 0;
         
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DoRowStatistic( void) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DoColStatistic( void) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -1635,6 +1639,12 @@ EXTERN_C const IID IID_IImageObject;
             IImageObject * This,
             /* [out] */ FLOAT *pNoise);
         
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DoRowStatistic )( 
+            IImageObject * This);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DoColStatistic )( 
+            IImageObject * This);
+        
         END_INTERFACE
     } IImageObjectVtbl;
 
@@ -1721,6 +1731,12 @@ EXTERN_C const IID IID_IImageObject;
 
 #define IImageObject_RowNoise(This,pNoise)	\
     ( (This)->lpVtbl -> RowNoise(This,pNoise) ) 
+
+#define IImageObject_DoRowStatistic(This)	\
+    ( (This)->lpVtbl -> DoRowStatistic(This) ) 
+
+#define IImageObject_DoColStatistic(This)	\
+    ( (This)->lpVtbl -> DoColStatistic(This) ) 
 
 #endif /* COBJMACROS */
 
@@ -2275,6 +2291,39 @@ EXTERN_C const IID IID_IDTImage;
             /* [in] */ LONG height,
             /* [in] */ BYTE *data) = 0;
         
+        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_OffsetEnable( 
+            /* [retval][out] */ BYTE *pVal) = 0;
+        
+        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_OffsetEnable( 
+            /* [in] */ BYTE newVal) = 0;
+        
+        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_GainEnable( 
+            /* [retval][out] */ BYTE *pVal) = 0;
+        
+        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_GainEnable( 
+            /* [in] */ BYTE newVal) = 0;
+        
+        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_PixelOrderEnable( 
+            /* [retval][out] */ BYTE *pVal) = 0;
+        
+        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_PixelOrderEnable( 
+            /* [in] */ BYTE newVal) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE OffsetCalibration( void) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GainCalibration( 
+            /* [in] */ LONG target) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GainCalSnap( void) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE GainArrayCal( void) = 0;
+        
+        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_arrayCorrectionEnable( 
+            /* [retval][out] */ BYTE *pVal) = 0;
+        
+        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_arrayCorrectionEnable( 
+            /* [in] */ BYTE newVal) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -2459,6 +2508,51 @@ EXTERN_C const IID IID_IDTImage;
             /* [in] */ LONG height,
             /* [in] */ BYTE *data);
         
+        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OffsetEnable )( 
+            IDTImage * This,
+            /* [retval][out] */ BYTE *pVal);
+        
+        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_OffsetEnable )( 
+            IDTImage * This,
+            /* [in] */ BYTE newVal);
+        
+        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_GainEnable )( 
+            IDTImage * This,
+            /* [retval][out] */ BYTE *pVal);
+        
+        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_GainEnable )( 
+            IDTImage * This,
+            /* [in] */ BYTE newVal);
+        
+        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_PixelOrderEnable )( 
+            IDTImage * This,
+            /* [retval][out] */ BYTE *pVal);
+        
+        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_PixelOrderEnable )( 
+            IDTImage * This,
+            /* [in] */ BYTE newVal);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *OffsetCalibration )( 
+            IDTImage * This);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GainCalibration )( 
+            IDTImage * This,
+            /* [in] */ LONG target);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GainCalSnap )( 
+            IDTImage * This);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *GainArrayCal )( 
+            IDTImage * This);
+        
+        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_arrayCorrectionEnable )( 
+            IDTImage * This,
+            /* [retval][out] */ BYTE *pVal);
+        
+        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_arrayCorrectionEnable )( 
+            IDTImage * This,
+            /* [in] */ BYTE newVal);
+        
         END_INTERFACE
     } IDTImageVtbl;
 
@@ -2593,6 +2687,42 @@ EXTERN_C const IID IID_IDTImage;
 
 #define IDTImage_OpenMemImage(This,width,height,data)	\
     ( (This)->lpVtbl -> OpenMemImage(This,width,height,data) ) 
+
+#define IDTImage_get_OffsetEnable(This,pVal)	\
+    ( (This)->lpVtbl -> get_OffsetEnable(This,pVal) ) 
+
+#define IDTImage_put_OffsetEnable(This,newVal)	\
+    ( (This)->lpVtbl -> put_OffsetEnable(This,newVal) ) 
+
+#define IDTImage_get_GainEnable(This,pVal)	\
+    ( (This)->lpVtbl -> get_GainEnable(This,pVal) ) 
+
+#define IDTImage_put_GainEnable(This,newVal)	\
+    ( (This)->lpVtbl -> put_GainEnable(This,newVal) ) 
+
+#define IDTImage_get_PixelOrderEnable(This,pVal)	\
+    ( (This)->lpVtbl -> get_PixelOrderEnable(This,pVal) ) 
+
+#define IDTImage_put_PixelOrderEnable(This,newVal)	\
+    ( (This)->lpVtbl -> put_PixelOrderEnable(This,newVal) ) 
+
+#define IDTImage_OffsetCalibration(This)	\
+    ( (This)->lpVtbl -> OffsetCalibration(This) ) 
+
+#define IDTImage_GainCalibration(This,target)	\
+    ( (This)->lpVtbl -> GainCalibration(This,target) ) 
+
+#define IDTImage_GainCalSnap(This)	\
+    ( (This)->lpVtbl -> GainCalSnap(This) ) 
+
+#define IDTImage_GainArrayCal(This)	\
+    ( (This)->lpVtbl -> GainArrayCal(This) ) 
+
+#define IDTImage_get_arrayCorrectionEnable(This,pVal)	\
+    ( (This)->lpVtbl -> get_arrayCorrectionEnable(This,pVal) ) 
+
+#define IDTImage_put_arrayCorrectionEnable(This,newVal)	\
+    ( (This)->lpVtbl -> put_arrayCorrectionEnable(This,newVal) ) 
 
 #endif /* COBJMACROS */
 

@@ -101,19 +101,13 @@ STDMETHODIMP CImageObject::Open(LONG Width, LONG Height, LONG BytesPerPixel)
 
 	m_YTable = new LONG [m_Height];
 
-	if(m_ColMax)
-		m_ColMax = new double[m_Width];
-	if(m_ColAvg)
-		m_ColAvg = new double[m_Width];
-	if(m_ColMin)
-		m_RowMax = new double [m_Width];
+	m_ColMax = new double[m_Width];
+	m_ColAvg = new double[m_Width];
+    m_ColMin = new double [m_Width];
 
-	if(m_RowAvg)
-		m_RowAvg = new double[m_Height];
-	if(m_RowMax)
-		m_RowMax = new double [m_Height];
-	if(m_RowMin)
-		m_RowMax = new double [m_Height];
+	m_RowAvg = new double[m_Height];
+	m_RowMax = new double [m_Height];
+    m_RowMin = new double [m_Height];
 
 	for(int i = 0; i<m_Width;i++)
 	{
@@ -193,7 +187,7 @@ STDMETHODIMP CImageObject::RowNoise(FLOAT* pNoise)
 }
 
 
-STDMETHODIMP CImageObject::DoRowStatistic(void)
+STDMETHODIMP CImageObject::DoColStatistic(void)
 {
 	long i =0;
 	long j = 0;
@@ -201,7 +195,7 @@ STDMETHODIMP CImageObject::DoRowStatistic(void)
 	long val;
 	for(j=0; j < m_Height;j++ ) {
 		get_ImageLineAddress(j,&pbase);
-		for(i=0; i++; i < m_Width) {
+		for(i=0; i < m_Width; i++) {
 			if(2 == m_BytesPerPixel) {
 				val = *(((WORD*)pbase)+i);
 				m_ColAvg[i] += val;
@@ -214,13 +208,13 @@ STDMETHODIMP CImageObject::DoRowStatistic(void)
 	}
 
 	for(i=0; i < m_Width; i++)
-		m_RowAvg[i] /= m_Height;
+		m_ColAvg[i] /= m_Height;
 
 	return S_OK;
 }
 
 
-STDMETHODIMP CImageObject::DoColStatistic(void)
+STDMETHODIMP CImageObject::DoRowStatistic(void)
 {
 	long i =0;
 	long j = 0;
@@ -228,7 +222,7 @@ STDMETHODIMP CImageObject::DoColStatistic(void)
 	long val;
 	for(j=0; j < m_Width;j++ ) {
 		get_ImageLineAddress(j,&pbase);
-		for(i=0; i++; i < m_Width) {
+		for(i=0; i < m_Width; i++) {
 			if(2 == m_BytesPerPixel) {
 				val = *(((WORD*)pbase)+i);
 				m_RowAvg[j] += val;

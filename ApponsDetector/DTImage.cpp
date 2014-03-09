@@ -825,7 +825,7 @@ STDMETHODIMP CDTImage::get_OffsetEnable(BYTE* pVal)
 STDMETHODIMP CDTImage::put_OffsetEnable(BYTE newVal)
 {
 	m_bOffsetEnable = newVal;
-	if(m_bGainEnable) {
+	if(m_bOffsetEnable) {
 		m_pFrameBuf->setOffsetProcessor(&m_offsetProcessor);
 	} else {
 		m_pFrameBuf->setOffsetProcessor(NULL);
@@ -884,7 +884,7 @@ STDMETHODIMP CDTImage::OffsetCalibration(void)
 	m_pImageObject->DoColStatistic();
 	m_pImageObject->ColAverage(&pAvg);
 	long i=0;
-	for(i=0; i++; i < width)
+	for(i=0; i<width;i++)
 		m_offsetProcessor.setOffset(((double*)pAvg)[i], i);
 	return S_OK;
 }
@@ -905,19 +905,19 @@ STDMETHODIMP CDTImage::GainCalibration(LONG target)
 	long flag = target;
 	if(0 == flag) {
 		target = ((double*)pAvg)[0];
-		for(i=0; i++; i < width) {
+		for(i=0; i < width; i++) {
 			val = ((double*)pAvg)[i];
 			if (val< target)
 				target = val;
 		}
 	}else if(1 == flag) {
-			for(i=0; i++; i < width) {
+			for(i=0; i < width; i++) {
 				val += ((double*)pAvg)[i];
 			}
 			target = val/width;
 	}else if(2 == flag) {
 		target = ((double*)pAvg)[0];
-		for(i=0; i++; i < width) {
+		for(i=0; i < width; i++) {
 			val = ((double*)pAvg)[i];
 			if (val> target)
 				target = val;
@@ -925,7 +925,7 @@ STDMETHODIMP CDTImage::GainCalibration(LONG target)
 		target = val/width;
 	}
 
-	for(i=0; i++; i < width) {
+	for(i=0;  i < width; i++) {
 		m_gainProcessor.setGain(target/((double*)pAvg)[i], i);
 	}
 	return S_OK;
