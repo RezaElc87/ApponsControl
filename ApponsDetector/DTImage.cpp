@@ -942,7 +942,8 @@ STDMETHODIMP CDTImage::GainCalSnap(void)
 	m_pImageObject->get_Width(&width);
 	long pAvg;
 	m_pImageObject->ColAverage(&pAvg);
-	m_arrayProcessor.addData((WORD*)pAvg, width);
+
+	m_arrayProcessor.addData((double*)pAvg, width);
 	return S_OK;
 }
 
@@ -966,9 +967,9 @@ STDMETHODIMP CDTImage::put_arrayCorrectionEnable(BYTE newVal)
 {
 	m_arrayCorrectionEnable = newVal;
 	if(m_arrayCorrectionEnable) {
-		m_pFrameBuf->setPixelOrderProcessor(&m_pixelOrderProcessor);
+		m_pFrameBuf->setArrayProcessor(&m_arrayProcessor);
 	} else {
-		m_pFrameBuf->setPixelOrderProcessor(NULL);
+		m_pFrameBuf->setArrayProcessor(NULL);
 	}
 	return S_OK;
 }

@@ -16,12 +16,19 @@ public:
 class CArrayCorrectionProcessor: public CLineProcessor
 {
 	struct map{
-		long target;
-		WORD* data;
+		WORD target;
+		double* data;
 	};
 	map mapArray[ARRAY_SIZE];
 
 public:
+	CArrayCorrectionProcessor()
+	{
+		for(int i=0; i<ARRAY_SIZE; i++){
+			mapArray[i].target = 0xFFFF;
+			mapArray[i].data = NULL;
+		}
+	}
 	~CArrayCorrectionProcessor() 
 	{
 		reset();
@@ -29,7 +36,7 @@ public:
 	void reset()
 	{
 		for(int i=0; i<ARRAY_SIZE; i++){
-			mapArray[i].target = 0xff;
+			mapArray[i].target = 0xFFFF;
 			if(mapArray[i].data) {
 				delete [] mapArray[i].data;
 				mapArray[i].data = NULL;
@@ -37,12 +44,12 @@ public:
 		}
 	}
 
-	void addData(WORD* src, long width)
+	void addData(double* src, long width)
 	{
 		int i = 0;
-		WORD* data = new WORD[width];
-		double avg;
-		memcpy(data,src, width* sizeof(WORD));
+		double* data = new double[width];
+		double avg = 0;
+		memcpy(data,src, width* sizeof(double));
 		for(i=0;i<width;i++){
 			avg += data[i];
 		}
@@ -60,7 +67,7 @@ public:
 		for(int j=i; j <(ARRAY_SIZE-1);j++) {
 			mapArray[i] = temp;
 			temp = mapArray[i+1];
-			if(temp.target == 0xFF)
+			if(temp.target == 0xFFFF)
 				break;
 		}
 	}
@@ -70,20 +77,26 @@ public:
 		//find the location of the val,
 		long i = 0;
 		double target = 0;
-		for(i=0; i < ARRAY_SIZE; i++)
+		double d = 0;
+		double factor = 0;
+		for(i=1; i < ARRAY_SIZE; i++)
 		{
-			if(mapArray[i].target != 0xFF) {
+			if(mapArray[i].target != 0xFFFF) {
 				if(mapArray[i].data[pixel] > val) {
 					//the pixel map is between target i and target i-1		
-					double d = mapArray[i].target - mapArray[i-1].target;
-					double factor = (val - mapArray[i-1].data[pixel])/(mapArray[i].data[pixel] - mapArray[i-1].data[pixel]);
-					target = d*factor;
+					d = mapArray[i].target - mapArray[i-1].target;
+					factor = (val - mapArray[i-1].data[pixel])/(mapArray[i].data[pixel] - mapArray[i-1].data[pixel]);
+					target = d*factor+mapArray[i-1].target;
 					return target;
 				}
-			}
+			} else 
+				break;
 		}
 		//Something wrong cannot find map value return the input
-		return val;
+		d = mapArray[i-1].target - mapArray[i-2].target;
+		factor = (val - mapArray[i-2].data[pixel])/(mapArray[i-1].data[pixel] - mapArray[i-2].data[pixel]);
+		target = d*factor+mapArray[i-2].target ;
+		return target ;
 	}
 
 	void process(WORD* src, long pixelNum) {

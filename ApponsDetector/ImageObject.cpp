@@ -114,7 +114,7 @@ STDMETHODIMP CImageObject::Open(LONG Width, LONG Height, LONG BytesPerPixel)
 		m_XTable[i] = i*m_BytesPerPixel; 
 		m_ColAvg [i] = 0;
 		m_ColMax [i] = 0;
-		m_ColMin [i] = 0xFF;
+		m_ColMin [i] = 0xFFFF;
 	}
 
 	for(int i = 0; i<m_Height;i++)
