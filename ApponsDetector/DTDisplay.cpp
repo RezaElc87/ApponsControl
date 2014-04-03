@@ -853,18 +853,25 @@ LRESULT CDTDisplay::OnRefresh(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*
 	{
 		m_DisplayImage.Draw(m_hMemDC,&m_DrawRect);
 		InvalidateRect(&m_DrawRect,FALSE);
-		BitBlt(this->GetDC(), 
+		HDC hDC = this->GetDC();
+
+		// Use the DC
+
+
+		BitBlt(hDC, 
                0,0, 
                 m_WndWidth,m_WndHeight,
                 m_hMemDC, 
                 0,0, 
-                SRCCOPY); 
+                SRCCOPY);
+		ReleaseDC(hDC);
 	}
 	return 0;
 }
 void CDTDisplay::OnFrameReady(LONG LineNum)
 {
 	//Refresh Dipslay buffer use m_pImageSrcObject
+	
 	if(RF_FRAME == m_RefreshMode)
 	{
 		//Do the LUT Map

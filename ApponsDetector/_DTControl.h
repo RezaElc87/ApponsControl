@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Sat Feb 08 19:17:24 2014
+/* at Wed Mar 26 12:30:48 2014
  */
 /* Compiler settings for _DTControl.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
@@ -45,6 +45,24 @@
 
 /* Forward Declarations */ 
 
+#ifndef __IDTDisplayControl_FWD_DEFINED__
+#define __IDTDisplayControl_FWD_DEFINED__
+typedef interface IDTDisplayControl IDTDisplayControl;
+#endif 	/* __IDTDisplayControl_FWD_DEFINED__ */
+
+
+#ifndef __IDTDetector_FWD_DEFINED__
+#define __IDTDetector_FWD_DEFINED__
+typedef interface IDTDetector IDTDetector;
+#endif 	/* __IDTDetector_FWD_DEFINED__ */
+
+
+#ifndef __IDTCommanderF3_FWD_DEFINED__
+#define __IDTCommanderF3_FWD_DEFINED__
+typedef interface IDTCommanderF3 IDTCommanderF3;
+#endif 	/* __IDTCommanderF3_FWD_DEFINED__ */
+
+
 #ifndef __IImageObject_FWD_DEFINED__
 #define __IImageObject_FWD_DEFINED__
 typedef interface IImageObject IImageObject;
@@ -57,28 +75,64 @@ typedef interface IDTDisplay IDTDisplay;
 #endif 	/* __IDTDisplay_FWD_DEFINED__ */
 
 
-#ifndef __IDTDetector_FWD_DEFINED__
-#define __IDTDetector_FWD_DEFINED__
-typedef interface IDTDetector IDTDetector;
-#endif 	/* __IDTDetector_FWD_DEFINED__ */
-
-
 #ifndef __IDTImage_FWD_DEFINED__
 #define __IDTImage_FWD_DEFINED__
 typedef interface IDTImage IDTImage;
 #endif 	/* __IDTImage_FWD_DEFINED__ */
 
 
-#ifndef __IDTDisplayControl_FWD_DEFINED__
-#define __IDTDisplayControl_FWD_DEFINED__
-typedef interface IDTDisplayControl IDTDisplayControl;
-#endif 	/* __IDTDisplayControl_FWD_DEFINED__ */
+#ifndef ___IDTDisplayControlEvents_FWD_DEFINED__
+#define ___IDTDisplayControlEvents_FWD_DEFINED__
+typedef interface _IDTDisplayControlEvents _IDTDisplayControlEvents;
+#endif 	/* ___IDTDisplayControlEvents_FWD_DEFINED__ */
 
 
-#ifndef __IDTCommanderF3_FWD_DEFINED__
-#define __IDTCommanderF3_FWD_DEFINED__
-typedef interface IDTCommanderF3 IDTCommanderF3;
-#endif 	/* __IDTCommanderF3_FWD_DEFINED__ */
+#ifndef __CDTDisplayControl_FWD_DEFINED__
+#define __CDTDisplayControl_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class CDTDisplayControl CDTDisplayControl;
+#else
+typedef struct CDTDisplayControl CDTDisplayControl;
+#endif /* __cplusplus */
+
+#endif 	/* __CDTDisplayControl_FWD_DEFINED__ */
+
+
+#ifndef ___IDTDetectorEvents_FWD_DEFINED__
+#define ___IDTDetectorEvents_FWD_DEFINED__
+typedef interface _IDTDetectorEvents _IDTDetectorEvents;
+#endif 	/* ___IDTDetectorEvents_FWD_DEFINED__ */
+
+
+#ifndef __CDTDetector_FWD_DEFINED__
+#define __CDTDetector_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class CDTDetector CDTDetector;
+#else
+typedef struct CDTDetector CDTDetector;
+#endif /* __cplusplus */
+
+#endif 	/* __CDTDetector_FWD_DEFINED__ */
+
+
+#ifndef ___IDTCommanderF3Events_FWD_DEFINED__
+#define ___IDTCommanderF3Events_FWD_DEFINED__
+typedef interface _IDTCommanderF3Events _IDTCommanderF3Events;
+#endif 	/* ___IDTCommanderF3Events_FWD_DEFINED__ */
+
+
+#ifndef __CDTCommanderF3_FWD_DEFINED__
+#define __CDTCommanderF3_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class CDTCommanderF3 CDTCommanderF3;
+#else
+typedef struct CDTCommanderF3 CDTCommanderF3;
+#endif /* __cplusplus */
+
+#endif 	/* __CDTCommanderF3_FWD_DEFINED__ */
 
 
 #ifndef __CImageObject_FWD_DEFINED__
@@ -111,24 +165,6 @@ typedef struct CDTDisplay CDTDisplay;
 #endif 	/* __CDTDisplay_FWD_DEFINED__ */
 
 
-#ifndef ___IDTDetectorEvents_FWD_DEFINED__
-#define ___IDTDetectorEvents_FWD_DEFINED__
-typedef interface _IDTDetectorEvents _IDTDetectorEvents;
-#endif 	/* ___IDTDetectorEvents_FWD_DEFINED__ */
-
-
-#ifndef __CDTDetector_FWD_DEFINED__
-#define __CDTDetector_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class CDTDetector CDTDetector;
-#else
-typedef struct CDTDetector CDTDetector;
-#endif /* __cplusplus */
-
-#endif 	/* __CDTDetector_FWD_DEFINED__ */
-
-
 #ifndef ___IDTImageEvents_FWD_DEFINED__
 #define ___IDTImageEvents_FWD_DEFINED__
 typedef interface _IDTImageEvents _IDTImageEvents;
@@ -147,42 +183,6 @@ typedef struct CDTImage CDTImage;
 #endif 	/* __CDTImage_FWD_DEFINED__ */
 
 
-#ifndef ___IDTDisplayControlEvents_FWD_DEFINED__
-#define ___IDTDisplayControlEvents_FWD_DEFINED__
-typedef interface _IDTDisplayControlEvents _IDTDisplayControlEvents;
-#endif 	/* ___IDTDisplayControlEvents_FWD_DEFINED__ */
-
-
-#ifndef __CDTDisplayControl_FWD_DEFINED__
-#define __CDTDisplayControl_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class CDTDisplayControl CDTDisplayControl;
-#else
-typedef struct CDTDisplayControl CDTDisplayControl;
-#endif /* __cplusplus */
-
-#endif 	/* __CDTDisplayControl_FWD_DEFINED__ */
-
-
-#ifndef ___IDTCommanderF3Events_FWD_DEFINED__
-#define ___IDTCommanderF3Events_FWD_DEFINED__
-typedef interface _IDTCommanderF3Events _IDTCommanderF3Events;
-#endif 	/* ___IDTCommanderF3Events_FWD_DEFINED__ */
-
-
-#ifndef __CDTCommanderF3_FWD_DEFINED__
-#define __CDTCommanderF3_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class CDTCommanderF3 CDTCommanderF3;
-#else
-typedef struct CDTCommanderF3 CDTCommanderF3;
-#endif /* __cplusplus */
-
-#endif 	/* __CDTCommanderF3_FWD_DEFINED__ */
-
-
 /* header files for imported files */
 #include "prsht.h"
 #include "mshtml.h"
@@ -195,111 +195,68 @@ extern "C"{
 #endif 
 
 
-#ifndef __IImageObject_INTERFACE_DEFINED__
-#define __IImageObject_INTERFACE_DEFINED__
+#ifndef __IDTDisplayControl_INTERFACE_DEFINED__
+#define __IDTDisplayControl_INTERFACE_DEFINED__
 
-/* interface IImageObject */
+/* interface IDTDisplayControl */
 /* [unique][helpstring][dual][uuid][object] */ 
 
 
-EXTERN_C const IID IID_IImageObject;
+EXTERN_C const IID IID_IDTDisplayControl;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("2668B542-3FBD-46B8-A1DE-FF9CD383325D")
-    IImageObject : public IDispatch
+    MIDL_INTERFACE("5A79B1CB-FF34-4F4F-A394-4972066A5763")
+    IDTDisplayControl : public IDispatch
     {
     public:
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageDataAddress( 
-            /* [retval][out] */ LONG *pVal) = 0;
+        virtual /* [id][requestedit][bindable][propput] */ HRESULT STDMETHODCALLTYPE put_AutoSize( 
+            /* [in] */ VARIANT_BOOL vbool) = 0;
         
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImageDataAddress( 
-            /* [in] */ LONG newVal) = 0;
+        virtual /* [id][requestedit][bindable][propget] */ HRESULT STDMETHODCALLTYPE get_AutoSize( 
+            /* [retval][out] */ VARIANT_BOOL *pbool) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Width( 
-            /* [retval][out] */ LONG *pVal) = 0;
+        virtual /* [id][requestedit][bindable][propput] */ HRESULT STDMETHODCALLTYPE put_BorderVisible( 
+            /* [in] */ VARIANT_BOOL vbool) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Height( 
-            /* [retval][out] */ LONG *pVal) = 0;
+        virtual /* [id][requestedit][bindable][propget] */ HRESULT STDMETHODCALLTYPE get_BorderVisible( 
+            /* [retval][out] */ VARIANT_BOOL *pbool) = 0;
         
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BytesPerPixel( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Pixel( 
-            /* [in] */ LONG X,
-            /* [in] */ LONG Y,
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Pixel( 
-            /* [in] */ LONG X,
-            /* [in] */ LONG Y,
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Open( 
-            /* [in] */ LONG Width,
-            /* [in] */ LONG Height,
-            /* [in] */ LONG BytesPerPixel) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageLineAddress( 
-            /* [in] */ LONG LineIndex,
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColAverage( 
-            /* [out] */ LONG *pAvg) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColMax( 
-            /* [out] */ LONG *pMax) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColMin( 
-            /* [out] */ LONG *pMin) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowMin( 
-            /* [out] */ LONG *pMin) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowMax( 
-            /* [out] */ LONG *pMax) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowAverage( 
-            /* [in] */ LONG *pAvg) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColNoise( 
-            /* [out] */ FLOAT *pNoise) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowNoise( 
-            /* [out] */ FLOAT *pNoise) = 0;
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Object( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
         
     };
     
 #else 	/* C style interface */
 
-    typedef struct IImageObjectVtbl
+    typedef struct IDTDisplayControlVtbl
     {
         BEGIN_INTERFACE
         
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IImageObject * This,
+            IDTDisplayControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IImageObject * This);
+            IDTDisplayControl * This);
         
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IImageObject * This);
+            IDTDisplayControl * This);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IImageObject * This,
+            IDTDisplayControl * This,
             /* [out] */ UINT *pctinfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IImageObject * This,
+            IDTDisplayControl * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ ITypeInfo **ppTInfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IImageObject * This,
+            IDTDisplayControl * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
             /* [range][in] */ UINT cNames,
@@ -307,7 +264,7 @@ EXTERN_C const IID IID_IImageObject;
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IImageObject * This,
+            IDTDisplayControl * This,
             /* [in] */ DISPID dispIdMember,
             /* [in] */ REFIID riid,
             /* [in] */ LCID lcid,
@@ -317,87 +274,32 @@ EXTERN_C const IID IID_IImageObject;
             /* [out] */ EXCEPINFO *pExcepInfo,
             /* [out] */ UINT *puArgErr);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageDataAddress )( 
-            IImageObject * This,
-            /* [retval][out] */ LONG *pVal);
+        /* [id][requestedit][bindable][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AutoSize )( 
+            IDTDisplayControl * This,
+            /* [in] */ VARIANT_BOOL vbool);
         
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImageDataAddress )( 
-            IImageObject * This,
-            /* [in] */ LONG newVal);
+        /* [id][requestedit][bindable][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSize )( 
+            IDTDisplayControl * This,
+            /* [retval][out] */ VARIANT_BOOL *pbool);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Width )( 
-            IImageObject * This,
-            /* [retval][out] */ LONG *pVal);
+        /* [id][requestedit][bindable][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BorderVisible )( 
+            IDTDisplayControl * This,
+            /* [in] */ VARIANT_BOOL vbool);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Height )( 
-            IImageObject * This,
-            /* [retval][out] */ LONG *pVal);
+        /* [id][requestedit][bindable][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BorderVisible )( 
+            IDTDisplayControl * This,
+            /* [retval][out] */ VARIANT_BOOL *pbool);
         
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BytesPerPixel )( 
-            IImageObject * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Pixel )( 
-            IImageObject * This,
-            /* [in] */ LONG X,
-            /* [in] */ LONG Y,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Pixel )( 
-            IImageObject * This,
-            /* [in] */ LONG X,
-            /* [in] */ LONG Y,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Open )( 
-            IImageObject * This,
-            /* [in] */ LONG Width,
-            /* [in] */ LONG Height,
-            /* [in] */ LONG BytesPerPixel);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageLineAddress )( 
-            IImageObject * This,
-            /* [in] */ LONG LineIndex,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColAverage )( 
-            IImageObject * This,
-            /* [out] */ LONG *pAvg);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColMax )( 
-            IImageObject * This,
-            /* [out] */ LONG *pMax);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColMin )( 
-            IImageObject * This,
-            /* [out] */ LONG *pMin);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowMin )( 
-            IImageObject * This,
-            /* [out] */ LONG *pMin);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowMax )( 
-            IImageObject * This,
-            /* [out] */ LONG *pMax);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowAverage )( 
-            IImageObject * This,
-            /* [in] */ LONG *pAvg);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColNoise )( 
-            IImageObject * This,
-            /* [out] */ FLOAT *pNoise);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowNoise )( 
-            IImageObject * This,
-            /* [out] */ FLOAT *pNoise);
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Object )( 
+            IDTDisplayControl * This,
+            /* [retval][out] */ IUnknown **pVal);
         
         END_INTERFACE
-    } IImageObjectVtbl;
+    } IDTDisplayControlVtbl;
 
-    interface IImageObject
+    interface IDTDisplayControl
     {
-        CONST_VTBL struct IImageObjectVtbl *lpVtbl;
+        CONST_VTBL struct IDTDisplayControlVtbl *lpVtbl;
     };
 
     
@@ -405,79 +307,43 @@ EXTERN_C const IID IID_IImageObject;
 #ifdef COBJMACROS
 
 
-#define IImageObject_QueryInterface(This,riid,ppvObject)	\
+#define IDTDisplayControl_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define IImageObject_AddRef(This)	\
+#define IDTDisplayControl_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define IImageObject_Release(This)	\
+#define IDTDisplayControl_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define IImageObject_GetTypeInfoCount(This,pctinfo)	\
+#define IDTDisplayControl_GetTypeInfoCount(This,pctinfo)	\
     ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
-#define IImageObject_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+#define IDTDisplayControl_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
     ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
-#define IImageObject_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+#define IDTDisplayControl_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
     ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
-#define IImageObject_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+#define IDTDisplayControl_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
-#define IImageObject_get_ImageDataAddress(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImageDataAddress(This,pVal) ) 
+#define IDTDisplayControl_put_AutoSize(This,vbool)	\
+    ( (This)->lpVtbl -> put_AutoSize(This,vbool) ) 
 
-#define IImageObject_put_ImageDataAddress(This,newVal)	\
-    ( (This)->lpVtbl -> put_ImageDataAddress(This,newVal) ) 
+#define IDTDisplayControl_get_AutoSize(This,pbool)	\
+    ( (This)->lpVtbl -> get_AutoSize(This,pbool) ) 
 
-#define IImageObject_get_Width(This,pVal)	\
-    ( (This)->lpVtbl -> get_Width(This,pVal) ) 
+#define IDTDisplayControl_put_BorderVisible(This,vbool)	\
+    ( (This)->lpVtbl -> put_BorderVisible(This,vbool) ) 
 
-#define IImageObject_get_Height(This,pVal)	\
-    ( (This)->lpVtbl -> get_Height(This,pVal) ) 
+#define IDTDisplayControl_get_BorderVisible(This,pbool)	\
+    ( (This)->lpVtbl -> get_BorderVisible(This,pbool) ) 
 
-#define IImageObject_get_BytesPerPixel(This,pVal)	\
-    ( (This)->lpVtbl -> get_BytesPerPixel(This,pVal) ) 
-
-#define IImageObject_get_Pixel(This,X,Y,pVal)	\
-    ( (This)->lpVtbl -> get_Pixel(This,X,Y,pVal) ) 
-
-#define IImageObject_put_Pixel(This,X,Y,newVal)	\
-    ( (This)->lpVtbl -> put_Pixel(This,X,Y,newVal) ) 
-
-#define IImageObject_Open(This,Width,Height,BytesPerPixel)	\
-    ( (This)->lpVtbl -> Open(This,Width,Height,BytesPerPixel) ) 
-
-#define IImageObject_get_ImageLineAddress(This,LineIndex,pVal)	\
-    ( (This)->lpVtbl -> get_ImageLineAddress(This,LineIndex,pVal) ) 
-
-#define IImageObject_ColAverage(This,pAvg)	\
-    ( (This)->lpVtbl -> ColAverage(This,pAvg) ) 
-
-#define IImageObject_ColMax(This,pMax)	\
-    ( (This)->lpVtbl -> ColMax(This,pMax) ) 
-
-#define IImageObject_ColMin(This,pMin)	\
-    ( (This)->lpVtbl -> ColMin(This,pMin) ) 
-
-#define IImageObject_RowMin(This,pMin)	\
-    ( (This)->lpVtbl -> RowMin(This,pMin) ) 
-
-#define IImageObject_RowMax(This,pMax)	\
-    ( (This)->lpVtbl -> RowMax(This,pMax) ) 
-
-#define IImageObject_RowAverage(This,pAvg)	\
-    ( (This)->lpVtbl -> RowAverage(This,pAvg) ) 
-
-#define IImageObject_ColNoise(This,pNoise)	\
-    ( (This)->lpVtbl -> ColNoise(This,pNoise) ) 
-
-#define IImageObject_RowNoise(This,pNoise)	\
-    ( (This)->lpVtbl -> RowNoise(This,pNoise) ) 
+#define IDTDisplayControl_get_Object(This,pVal)	\
+    ( (This)->lpVtbl -> get_Object(This,pVal) ) 
 
 #endif /* COBJMACROS */
 
@@ -487,432 +353,7 @@ EXTERN_C const IID IID_IImageObject;
 
 
 
-#endif 	/* __IImageObject_INTERFACE_DEFINED__ */
-
-
-#ifndef __IDTDisplay_INTERFACE_DEFINED__
-#define __IDTDisplay_INTERFACE_DEFINED__
-
-/* interface IDTDisplay */
-/* [unique][helpstring][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IDTDisplay;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("C22B30FA-860F-4565-8BDC-FC90EFC56F96")
-    IDTDisplay : public IDispatch
-    {
-    public:
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgWidth( 
-            /* [retval][out] */ ULONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgWidth( 
-            /* [in] */ ULONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgHeight( 
-            /* [retval][out] */ ULONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgHeight( 
-            /* [in] */ ULONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Gamma( 
-            /* [retval][out] */ FLOAT *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Gamma( 
-            /* [in] */ FLOAT newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MapStart( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MapStart( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MapEnd( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MapEnd( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DataSource( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DataSource( 
-            /* [in] */ IUnknown *newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DisplayControl( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DisplayControl( 
-            /* [in] */ IUnknown *newVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Open( 
-            /* [retval][out] */ LONG *bOK) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Close( void) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_RefreshMode( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_RefreshMode( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_RefreshRate( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_RefreshRate( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageObject( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DisplayScale( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DisplayScale( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Refresh( void) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_OrgPoint_X( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_OrgPoint_X( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_OrgPoint_Y( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_OrgPoint_Y( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Load( 
-            /* [in] */ BSTR FilePath) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Save( 
-            /* [in] */ BSTR FilePath) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ObjectHandle( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Repaint( void) = 0;
-        
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct IDTDisplayVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IDTDisplay * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IDTDisplay * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IDTDisplay * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IDTDisplay * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IDTDisplay * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IDTDisplay * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IDTDisplay * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgWidth )( 
-            IDTDisplay * This,
-            /* [retval][out] */ ULONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgWidth )( 
-            IDTDisplay * This,
-            /* [in] */ ULONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgHeight )( 
-            IDTDisplay * This,
-            /* [retval][out] */ ULONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgHeight )( 
-            IDTDisplay * This,
-            /* [in] */ ULONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Gamma )( 
-            IDTDisplay * This,
-            /* [retval][out] */ FLOAT *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Gamma )( 
-            IDTDisplay * This,
-            /* [in] */ FLOAT newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MapStart )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MapStart )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MapEnd )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MapEnd )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DataSource )( 
-            IDTDisplay * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DataSource )( 
-            IDTDisplay * This,
-            /* [in] */ IUnknown *newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DisplayControl )( 
-            IDTDisplay * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DisplayControl )( 
-            IDTDisplay * This,
-            /* [in] */ IUnknown *newVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Open )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *bOK);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Close )( 
-            IDTDisplay * This);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_RefreshMode )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_RefreshMode )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_RefreshRate )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_RefreshRate )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageObject )( 
-            IDTDisplay * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DisplayScale )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DisplayScale )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Refresh )( 
-            IDTDisplay * This);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OrgPoint_X )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_OrgPoint_X )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OrgPoint_Y )( 
-            IDTDisplay * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_OrgPoint_Y )( 
-            IDTDisplay * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Load )( 
-            IDTDisplay * This,
-            /* [in] */ BSTR FilePath);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
-            IDTDisplay * This,
-            /* [in] */ BSTR FilePath);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ObjectHandle )( 
-            IDTDisplay * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Repaint )( 
-            IDTDisplay * This);
-        
-        END_INTERFACE
-    } IDTDisplayVtbl;
-
-    interface IDTDisplay
-    {
-        CONST_VTBL struct IDTDisplayVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IDTDisplay_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IDTDisplay_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IDTDisplay_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IDTDisplay_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define IDTDisplay_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define IDTDisplay_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define IDTDisplay_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-
-#define IDTDisplay_get_ImgWidth(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImgWidth(This,pVal) ) 
-
-#define IDTDisplay_put_ImgWidth(This,newVal)	\
-    ( (This)->lpVtbl -> put_ImgWidth(This,newVal) ) 
-
-#define IDTDisplay_get_ImgHeight(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImgHeight(This,pVal) ) 
-
-#define IDTDisplay_put_ImgHeight(This,newVal)	\
-    ( (This)->lpVtbl -> put_ImgHeight(This,newVal) ) 
-
-#define IDTDisplay_get_Gamma(This,pVal)	\
-    ( (This)->lpVtbl -> get_Gamma(This,pVal) ) 
-
-#define IDTDisplay_put_Gamma(This,newVal)	\
-    ( (This)->lpVtbl -> put_Gamma(This,newVal) ) 
-
-#define IDTDisplay_get_MapStart(This,pVal)	\
-    ( (This)->lpVtbl -> get_MapStart(This,pVal) ) 
-
-#define IDTDisplay_put_MapStart(This,newVal)	\
-    ( (This)->lpVtbl -> put_MapStart(This,newVal) ) 
-
-#define IDTDisplay_get_MapEnd(This,pVal)	\
-    ( (This)->lpVtbl -> get_MapEnd(This,pVal) ) 
-
-#define IDTDisplay_put_MapEnd(This,newVal)	\
-    ( (This)->lpVtbl -> put_MapEnd(This,newVal) ) 
-
-#define IDTDisplay_get_DataSource(This,pVal)	\
-    ( (This)->lpVtbl -> get_DataSource(This,pVal) ) 
-
-#define IDTDisplay_put_DataSource(This,newVal)	\
-    ( (This)->lpVtbl -> put_DataSource(This,newVal) ) 
-
-#define IDTDisplay_get_DisplayControl(This,pVal)	\
-    ( (This)->lpVtbl -> get_DisplayControl(This,pVal) ) 
-
-#define IDTDisplay_put_DisplayControl(This,newVal)	\
-    ( (This)->lpVtbl -> put_DisplayControl(This,newVal) ) 
-
-#define IDTDisplay_Open(This,bOK)	\
-    ( (This)->lpVtbl -> Open(This,bOK) ) 
-
-#define IDTDisplay_Close(This)	\
-    ( (This)->lpVtbl -> Close(This) ) 
-
-#define IDTDisplay_get_RefreshMode(This,pVal)	\
-    ( (This)->lpVtbl -> get_RefreshMode(This,pVal) ) 
-
-#define IDTDisplay_put_RefreshMode(This,newVal)	\
-    ( (This)->lpVtbl -> put_RefreshMode(This,newVal) ) 
-
-#define IDTDisplay_get_RefreshRate(This,pVal)	\
-    ( (This)->lpVtbl -> get_RefreshRate(This,pVal) ) 
-
-#define IDTDisplay_put_RefreshRate(This,newVal)	\
-    ( (This)->lpVtbl -> put_RefreshRate(This,newVal) ) 
-
-#define IDTDisplay_get_ImageObject(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImageObject(This,pVal) ) 
-
-#define IDTDisplay_get_DisplayScale(This,pVal)	\
-    ( (This)->lpVtbl -> get_DisplayScale(This,pVal) ) 
-
-#define IDTDisplay_put_DisplayScale(This,newVal)	\
-    ( (This)->lpVtbl -> put_DisplayScale(This,newVal) ) 
-
-#define IDTDisplay_Refresh(This)	\
-    ( (This)->lpVtbl -> Refresh(This) ) 
-
-#define IDTDisplay_get_OrgPoint_X(This,pVal)	\
-    ( (This)->lpVtbl -> get_OrgPoint_X(This,pVal) ) 
-
-#define IDTDisplay_put_OrgPoint_X(This,newVal)	\
-    ( (This)->lpVtbl -> put_OrgPoint_X(This,newVal) ) 
-
-#define IDTDisplay_get_OrgPoint_Y(This,pVal)	\
-    ( (This)->lpVtbl -> get_OrgPoint_Y(This,pVal) ) 
-
-#define IDTDisplay_put_OrgPoint_Y(This,newVal)	\
-    ( (This)->lpVtbl -> put_OrgPoint_Y(This,newVal) ) 
-
-#define IDTDisplay_Load(This,FilePath)	\
-    ( (This)->lpVtbl -> Load(This,FilePath) ) 
-
-#define IDTDisplay_Save(This,FilePath)	\
-    ( (This)->lpVtbl -> Save(This,FilePath) ) 
-
-#define IDTDisplay_get_ObjectHandle(This,pVal)	\
-    ( (This)->lpVtbl -> get_ObjectHandle(This,pVal) ) 
-
-#define IDTDisplay_Repaint(This)	\
-    ( (This)->lpVtbl -> Repaint(This) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IDTDisplay_INTERFACE_DEFINED__ */
+#endif 	/* __IDTDisplayControl_INTERFACE_DEFINED__ */
 
 
 #ifndef __IDTDetector_INTERFACE_DEFINED__
@@ -926,7 +367,7 @@ EXTERN_C const IID IID_IDTDetector;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("3648F72D-1F1C-4D6A-80C5-53DEAA1359AB")
+    MIDL_INTERFACE("7C13A54F-69C0-4F51-A48D-F55CE086F72D")
     IDTDetector : public IDispatch
     {
     public:
@@ -1234,614 +675,6 @@ EXTERN_C const IID IID_IDTDetector;
 #endif 	/* __IDTDetector_INTERFACE_DEFINED__ */
 
 
-#ifndef __IDTImage_INTERFACE_DEFINED__
-#define __IDTImage_INTERFACE_DEFINED__
-
-/* interface IDTImage */
-/* [unique][helpstring][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IDTImage;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("DE232739-9353-452B-8AE3-DACC5DF58486")
-    IDTImage : public IDispatch
-    {
-    public:
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgHeight( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgHeight( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgWidth( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgWidth( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BytesPerPixel( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_BytesPerPixel( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ChannelType( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ChannelType( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImagePort( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImagePort( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DetectorObject( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DetectorObject( 
-            /* [in] */ IUnknown *newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_IsOpened( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastErrID( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Open( 
-            /* [retval][out] */ LONG *bOK) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Close( void) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Grab( 
-            /* [in] */ LONG FrameNum,
-            /* [retval][out] */ LONG *bOK) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Snap( 
-            /* [in] */ LONG FrameNum,
-            /* [retval][out] */ LONG *bOK) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE PrintErrMsg( 
-            /* [in] */ LONG ErrID,
-            /* [out] */ BSTR *ErrMsg) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SubFrameHeight( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SubFrameHeight( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Stop( void) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_IsGrabing( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageObject( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BandWidth( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ObjectHandle( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TimeOut( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_TimeOut( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ExFrameTrigger( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ExFrameTrigger( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_DualScanMode( 
-            /* [retval][out] */ LONG *pVal) = 0;
-        
-        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_DualScanMode( 
-            /* [in] */ LONG newVal) = 0;
-        
-        virtual /* [id] */ HRESULT STDMETHODCALLTYPE OpenMemImage( 
-            /* [in] */ LONG width,
-            /* [in] */ LONG height,
-            /* [in] */ BYTE *data) = 0;
-        
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct IDTImageVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IDTImage * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IDTImage * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IDTImage * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IDTImage * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IDTImage * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IDTImage * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IDTImage * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgHeight )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgHeight )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgWidth )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgWidth )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BytesPerPixel )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BytesPerPixel )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ChannelType )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ChannelType )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImagePort )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImagePort )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DetectorObject )( 
-            IDTImage * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DetectorObject )( 
-            IDTImage * This,
-            /* [in] */ IUnknown *newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_IsOpened )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastErrID )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Open )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *bOK);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Close )( 
-            IDTImage * This);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Grab )( 
-            IDTImage * This,
-            /* [in] */ LONG FrameNum,
-            /* [retval][out] */ LONG *bOK);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Snap )( 
-            IDTImage * This,
-            /* [in] */ LONG FrameNum,
-            /* [retval][out] */ LONG *bOK);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *PrintErrMsg )( 
-            IDTImage * This,
-            /* [in] */ LONG ErrID,
-            /* [out] */ BSTR *ErrMsg);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SubFrameHeight )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SubFrameHeight )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
-            IDTImage * This);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_IsGrabing )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageObject )( 
-            IDTImage * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BandWidth )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ObjectHandle )( 
-            IDTImage * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_TimeOut )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_TimeOut )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExFrameTrigger )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ExFrameTrigger )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DualScanMode )( 
-            IDTImage * This,
-            /* [retval][out] */ LONG *pVal);
-        
-        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DualScanMode )( 
-            IDTImage * This,
-            /* [in] */ LONG newVal);
-        
-        /* [id] */ HRESULT ( STDMETHODCALLTYPE *OpenMemImage )( 
-            IDTImage * This,
-            /* [in] */ LONG width,
-            /* [in] */ LONG height,
-            /* [in] */ BYTE *data);
-        
-        END_INTERFACE
-    } IDTImageVtbl;
-
-    interface IDTImage
-    {
-        CONST_VTBL struct IDTImageVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IDTImage_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IDTImage_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IDTImage_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IDTImage_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define IDTImage_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define IDTImage_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define IDTImage_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-
-#define IDTImage_get_ImgHeight(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImgHeight(This,pVal) ) 
-
-#define IDTImage_put_ImgHeight(This,newVal)	\
-    ( (This)->lpVtbl -> put_ImgHeight(This,newVal) ) 
-
-#define IDTImage_get_ImgWidth(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImgWidth(This,pVal) ) 
-
-#define IDTImage_put_ImgWidth(This,newVal)	\
-    ( (This)->lpVtbl -> put_ImgWidth(This,newVal) ) 
-
-#define IDTImage_get_BytesPerPixel(This,pVal)	\
-    ( (This)->lpVtbl -> get_BytesPerPixel(This,pVal) ) 
-
-#define IDTImage_put_BytesPerPixel(This,newVal)	\
-    ( (This)->lpVtbl -> put_BytesPerPixel(This,newVal) ) 
-
-#define IDTImage_get_ChannelType(This,pVal)	\
-    ( (This)->lpVtbl -> get_ChannelType(This,pVal) ) 
-
-#define IDTImage_put_ChannelType(This,newVal)	\
-    ( (This)->lpVtbl -> put_ChannelType(This,newVal) ) 
-
-#define IDTImage_get_ImagePort(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImagePort(This,pVal) ) 
-
-#define IDTImage_put_ImagePort(This,newVal)	\
-    ( (This)->lpVtbl -> put_ImagePort(This,newVal) ) 
-
-#define IDTImage_get_DetectorObject(This,pVal)	\
-    ( (This)->lpVtbl -> get_DetectorObject(This,pVal) ) 
-
-#define IDTImage_put_DetectorObject(This,newVal)	\
-    ( (This)->lpVtbl -> put_DetectorObject(This,newVal) ) 
-
-#define IDTImage_get_IsOpened(This,pVal)	\
-    ( (This)->lpVtbl -> get_IsOpened(This,pVal) ) 
-
-#define IDTImage_get_LastErrID(This,pVal)	\
-    ( (This)->lpVtbl -> get_LastErrID(This,pVal) ) 
-
-#define IDTImage_Open(This,bOK)	\
-    ( (This)->lpVtbl -> Open(This,bOK) ) 
-
-#define IDTImage_Close(This)	\
-    ( (This)->lpVtbl -> Close(This) ) 
-
-#define IDTImage_Grab(This,FrameNum,bOK)	\
-    ( (This)->lpVtbl -> Grab(This,FrameNum,bOK) ) 
-
-#define IDTImage_Snap(This,FrameNum,bOK)	\
-    ( (This)->lpVtbl -> Snap(This,FrameNum,bOK) ) 
-
-#define IDTImage_PrintErrMsg(This,ErrID,ErrMsg)	\
-    ( (This)->lpVtbl -> PrintErrMsg(This,ErrID,ErrMsg) ) 
-
-#define IDTImage_get_SubFrameHeight(This,pVal)	\
-    ( (This)->lpVtbl -> get_SubFrameHeight(This,pVal) ) 
-
-#define IDTImage_put_SubFrameHeight(This,newVal)	\
-    ( (This)->lpVtbl -> put_SubFrameHeight(This,newVal) ) 
-
-#define IDTImage_Stop(This)	\
-    ( (This)->lpVtbl -> Stop(This) ) 
-
-#define IDTImage_get_IsGrabing(This,pVal)	\
-    ( (This)->lpVtbl -> get_IsGrabing(This,pVal) ) 
-
-#define IDTImage_get_ImageObject(This,pVal)	\
-    ( (This)->lpVtbl -> get_ImageObject(This,pVal) ) 
-
-#define IDTImage_get_BandWidth(This,pVal)	\
-    ( (This)->lpVtbl -> get_BandWidth(This,pVal) ) 
-
-#define IDTImage_get_ObjectHandle(This,pVal)	\
-    ( (This)->lpVtbl -> get_ObjectHandle(This,pVal) ) 
-
-#define IDTImage_get_TimeOut(This,pVal)	\
-    ( (This)->lpVtbl -> get_TimeOut(This,pVal) ) 
-
-#define IDTImage_put_TimeOut(This,newVal)	\
-    ( (This)->lpVtbl -> put_TimeOut(This,newVal) ) 
-
-#define IDTImage_get_ExFrameTrigger(This,pVal)	\
-    ( (This)->lpVtbl -> get_ExFrameTrigger(This,pVal) ) 
-
-#define IDTImage_put_ExFrameTrigger(This,newVal)	\
-    ( (This)->lpVtbl -> put_ExFrameTrigger(This,newVal) ) 
-
-#define IDTImage_get_DualScanMode(This,pVal)	\
-    ( (This)->lpVtbl -> get_DualScanMode(This,pVal) ) 
-
-#define IDTImage_put_DualScanMode(This,newVal)	\
-    ( (This)->lpVtbl -> put_DualScanMode(This,newVal) ) 
-
-#define IDTImage_OpenMemImage(This,width,height,data)	\
-    ( (This)->lpVtbl -> OpenMemImage(This,width,height,data) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IDTImage_INTERFACE_DEFINED__ */
-
-
-#ifndef __IDTDisplayControl_INTERFACE_DEFINED__
-#define __IDTDisplayControl_INTERFACE_DEFINED__
-
-/* interface IDTDisplayControl */
-/* [unique][helpstring][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IDTDisplayControl;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("6CDC46F2-4137-4093-AE9F-4443633F6DA7")
-    IDTDisplayControl : public IDispatch
-    {
-    public:
-        virtual /* [id][requestedit][bindable][propput] */ HRESULT STDMETHODCALLTYPE put_AutoSize( 
-            /* [in] */ VARIANT_BOOL vbool) = 0;
-        
-        virtual /* [id][requestedit][bindable][propget] */ HRESULT STDMETHODCALLTYPE get_AutoSize( 
-            /* [retval][out] */ VARIANT_BOOL *pbool) = 0;
-        
-        virtual /* [id][requestedit][bindable][propput] */ HRESULT STDMETHODCALLTYPE put_BorderVisible( 
-            /* [in] */ VARIANT_BOOL vbool) = 0;
-        
-        virtual /* [id][requestedit][bindable][propget] */ HRESULT STDMETHODCALLTYPE get_BorderVisible( 
-            /* [retval][out] */ VARIANT_BOOL *pbool) = 0;
-        
-        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Object( 
-            /* [retval][out] */ IUnknown **pVal) = 0;
-        
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct IDTDisplayControlVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IDTDisplayControl * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IDTDisplayControl * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IDTDisplayControl * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IDTDisplayControl * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IDTDisplayControl * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IDTDisplayControl * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IDTDisplayControl * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        /* [id][requestedit][bindable][propput] */ HRESULT ( STDMETHODCALLTYPE *put_AutoSize )( 
-            IDTDisplayControl * This,
-            /* [in] */ VARIANT_BOOL vbool);
-        
-        /* [id][requestedit][bindable][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AutoSize )( 
-            IDTDisplayControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pbool);
-        
-        /* [id][requestedit][bindable][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BorderVisible )( 
-            IDTDisplayControl * This,
-            /* [in] */ VARIANT_BOOL vbool);
-        
-        /* [id][requestedit][bindable][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BorderVisible )( 
-            IDTDisplayControl * This,
-            /* [retval][out] */ VARIANT_BOOL *pbool);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Object )( 
-            IDTDisplayControl * This,
-            /* [retval][out] */ IUnknown **pVal);
-        
-        END_INTERFACE
-    } IDTDisplayControlVtbl;
-
-    interface IDTDisplayControl
-    {
-        CONST_VTBL struct IDTDisplayControlVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IDTDisplayControl_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IDTDisplayControl_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IDTDisplayControl_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IDTDisplayControl_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define IDTDisplayControl_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define IDTDisplayControl_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define IDTDisplayControl_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-
-#define IDTDisplayControl_put_AutoSize(This,vbool)	\
-    ( (This)->lpVtbl -> put_AutoSize(This,vbool) ) 
-
-#define IDTDisplayControl_get_AutoSize(This,pbool)	\
-    ( (This)->lpVtbl -> get_AutoSize(This,pbool) ) 
-
-#define IDTDisplayControl_put_BorderVisible(This,vbool)	\
-    ( (This)->lpVtbl -> put_BorderVisible(This,vbool) ) 
-
-#define IDTDisplayControl_get_BorderVisible(This,pbool)	\
-    ( (This)->lpVtbl -> get_BorderVisible(This,pbool) ) 
-
-#define IDTDisplayControl_get_Object(This,pVal)	\
-    ( (This)->lpVtbl -> get_Object(This,pVal) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IDTDisplayControl_INTERFACE_DEFINED__ */
-
-
 #ifndef __IDTCommanderF3_INTERFACE_DEFINED__
 #define __IDTCommanderF3_INTERFACE_DEFINED__
 
@@ -1853,7 +686,7 @@ EXTERN_C const IID IID_IDTCommanderF3;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("49422A4C-63E0-4674-9073-5867DF5FECDC")
+    MIDL_INTERFACE("A164B205-1A1E-4345-A6F6-38D4715EC7FB")
     IDTCommanderF3 : public IDispatch
     {
     public:
@@ -2605,6 +1438,1173 @@ EXTERN_C const IID IID_IDTCommanderF3;
 #endif 	/* __IDTCommanderF3_INTERFACE_DEFINED__ */
 
 
+#ifndef __IImageObject_INTERFACE_DEFINED__
+#define __IImageObject_INTERFACE_DEFINED__
+
+/* interface IImageObject */
+/* [unique][helpstring][dual][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IImageObject;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("564FBD53-2CF3-47D8-AD62-670840E804BE")
+    IImageObject : public IDispatch
+    {
+    public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageDataAddress( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImageDataAddress( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Width( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Height( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BytesPerPixel( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Pixel( 
+            /* [in] */ LONG X,
+            /* [in] */ LONG Y,
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Pixel( 
+            /* [in] */ LONG X,
+            /* [in] */ LONG Y,
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Open( 
+            /* [in] */ LONG Width,
+            /* [in] */ LONG Height,
+            /* [in] */ LONG BytesPerPixel) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageLineAddress( 
+            /* [in] */ LONG LineIndex,
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColAverage( 
+            /* [out] */ LONG *pAvg) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColMax( 
+            /* [out] */ LONG *pMax) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColMin( 
+            /* [out] */ LONG *pMin) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowMin( 
+            /* [out] */ LONG *pMin) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowMax( 
+            /* [out] */ LONG *pMax) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowAverage( 
+            /* [in] */ LONG *pAvg) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ColNoise( 
+            /* [out] */ FLOAT *pNoise) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE RowNoise( 
+            /* [out] */ FLOAT *pNoise) = 0;
+        
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct IImageObjectVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IImageObject * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            __RPC__deref_out  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IImageObject * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IImageObject * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            IImageObject * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            IImageObject * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            IImageObject * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            IImageObject * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageDataAddress )( 
+            IImageObject * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImageDataAddress )( 
+            IImageObject * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Width )( 
+            IImageObject * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Height )( 
+            IImageObject * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BytesPerPixel )( 
+            IImageObject * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Pixel )( 
+            IImageObject * This,
+            /* [in] */ LONG X,
+            /* [in] */ LONG Y,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Pixel )( 
+            IImageObject * This,
+            /* [in] */ LONG X,
+            /* [in] */ LONG Y,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Open )( 
+            IImageObject * This,
+            /* [in] */ LONG Width,
+            /* [in] */ LONG Height,
+            /* [in] */ LONG BytesPerPixel);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageLineAddress )( 
+            IImageObject * This,
+            /* [in] */ LONG LineIndex,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColAverage )( 
+            IImageObject * This,
+            /* [out] */ LONG *pAvg);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColMax )( 
+            IImageObject * This,
+            /* [out] */ LONG *pMax);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColMin )( 
+            IImageObject * This,
+            /* [out] */ LONG *pMin);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowMin )( 
+            IImageObject * This,
+            /* [out] */ LONG *pMin);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowMax )( 
+            IImageObject * This,
+            /* [out] */ LONG *pMax);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowAverage )( 
+            IImageObject * This,
+            /* [in] */ LONG *pAvg);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *ColNoise )( 
+            IImageObject * This,
+            /* [out] */ FLOAT *pNoise);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *RowNoise )( 
+            IImageObject * This,
+            /* [out] */ FLOAT *pNoise);
+        
+        END_INTERFACE
+    } IImageObjectVtbl;
+
+    interface IImageObject
+    {
+        CONST_VTBL struct IImageObjectVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IImageObject_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IImageObject_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IImageObject_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IImageObject_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define IImageObject_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define IImageObject_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define IImageObject_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+
+#define IImageObject_get_ImageDataAddress(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImageDataAddress(This,pVal) ) 
+
+#define IImageObject_put_ImageDataAddress(This,newVal)	\
+    ( (This)->lpVtbl -> put_ImageDataAddress(This,newVal) ) 
+
+#define IImageObject_get_Width(This,pVal)	\
+    ( (This)->lpVtbl -> get_Width(This,pVal) ) 
+
+#define IImageObject_get_Height(This,pVal)	\
+    ( (This)->lpVtbl -> get_Height(This,pVal) ) 
+
+#define IImageObject_get_BytesPerPixel(This,pVal)	\
+    ( (This)->lpVtbl -> get_BytesPerPixel(This,pVal) ) 
+
+#define IImageObject_get_Pixel(This,X,Y,pVal)	\
+    ( (This)->lpVtbl -> get_Pixel(This,X,Y,pVal) ) 
+
+#define IImageObject_put_Pixel(This,X,Y,newVal)	\
+    ( (This)->lpVtbl -> put_Pixel(This,X,Y,newVal) ) 
+
+#define IImageObject_Open(This,Width,Height,BytesPerPixel)	\
+    ( (This)->lpVtbl -> Open(This,Width,Height,BytesPerPixel) ) 
+
+#define IImageObject_get_ImageLineAddress(This,LineIndex,pVal)	\
+    ( (This)->lpVtbl -> get_ImageLineAddress(This,LineIndex,pVal) ) 
+
+#define IImageObject_ColAverage(This,pAvg)	\
+    ( (This)->lpVtbl -> ColAverage(This,pAvg) ) 
+
+#define IImageObject_ColMax(This,pMax)	\
+    ( (This)->lpVtbl -> ColMax(This,pMax) ) 
+
+#define IImageObject_ColMin(This,pMin)	\
+    ( (This)->lpVtbl -> ColMin(This,pMin) ) 
+
+#define IImageObject_RowMin(This,pMin)	\
+    ( (This)->lpVtbl -> RowMin(This,pMin) ) 
+
+#define IImageObject_RowMax(This,pMax)	\
+    ( (This)->lpVtbl -> RowMax(This,pMax) ) 
+
+#define IImageObject_RowAverage(This,pAvg)	\
+    ( (This)->lpVtbl -> RowAverage(This,pAvg) ) 
+
+#define IImageObject_ColNoise(This,pNoise)	\
+    ( (This)->lpVtbl -> ColNoise(This,pNoise) ) 
+
+#define IImageObject_RowNoise(This,pNoise)	\
+    ( (This)->lpVtbl -> RowNoise(This,pNoise) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IImageObject_INTERFACE_DEFINED__ */
+
+
+#ifndef __IDTDisplay_INTERFACE_DEFINED__
+#define __IDTDisplay_INTERFACE_DEFINED__
+
+/* interface IDTDisplay */
+/* [unique][helpstring][dual][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IDTDisplay;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("C22B30FA-860F-4565-8BDC-FC90EFC56F96")
+    IDTDisplay : public IDispatch
+    {
+    public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgWidth( 
+            /* [retval][out] */ ULONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgWidth( 
+            /* [in] */ ULONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgHeight( 
+            /* [retval][out] */ ULONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgHeight( 
+            /* [in] */ ULONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_Gamma( 
+            /* [retval][out] */ FLOAT *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_Gamma( 
+            /* [in] */ FLOAT newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MapStart( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MapStart( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_MapEnd( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_MapEnd( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DataSource( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DataSource( 
+            /* [in] */ IUnknown *newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DisplayControl( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DisplayControl( 
+            /* [in] */ IUnknown *newVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Open( 
+            /* [retval][out] */ LONG *bOK) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Close( void) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_RefreshMode( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_RefreshMode( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_RefreshRate( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_RefreshRate( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageObject( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DisplayScale( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DisplayScale( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Refresh( void) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_OrgPoint_X( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_OrgPoint_X( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_OrgPoint_Y( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_OrgPoint_Y( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Load( 
+            /* [in] */ BSTR FilePath) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Save( 
+            /* [in] */ BSTR FilePath) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ObjectHandle( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Repaint( void) = 0;
+        
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct IDTDisplayVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IDTDisplay * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            __RPC__deref_out  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IDTDisplay * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IDTDisplay * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            IDTDisplay * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            IDTDisplay * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            IDTDisplay * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            IDTDisplay * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgWidth )( 
+            IDTDisplay * This,
+            /* [retval][out] */ ULONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgWidth )( 
+            IDTDisplay * This,
+            /* [in] */ ULONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgHeight )( 
+            IDTDisplay * This,
+            /* [retval][out] */ ULONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgHeight )( 
+            IDTDisplay * This,
+            /* [in] */ ULONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Gamma )( 
+            IDTDisplay * This,
+            /* [retval][out] */ FLOAT *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Gamma )( 
+            IDTDisplay * This,
+            /* [in] */ FLOAT newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MapStart )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MapStart )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_MapEnd )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_MapEnd )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DataSource )( 
+            IDTDisplay * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DataSource )( 
+            IDTDisplay * This,
+            /* [in] */ IUnknown *newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DisplayControl )( 
+            IDTDisplay * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DisplayControl )( 
+            IDTDisplay * This,
+            /* [in] */ IUnknown *newVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Open )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *bOK);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Close )( 
+            IDTDisplay * This);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_RefreshMode )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_RefreshMode )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_RefreshRate )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_RefreshRate )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageObject )( 
+            IDTDisplay * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DisplayScale )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DisplayScale )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Refresh )( 
+            IDTDisplay * This);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OrgPoint_X )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_OrgPoint_X )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_OrgPoint_Y )( 
+            IDTDisplay * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_OrgPoint_Y )( 
+            IDTDisplay * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Load )( 
+            IDTDisplay * This,
+            /* [in] */ BSTR FilePath);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Save )( 
+            IDTDisplay * This,
+            /* [in] */ BSTR FilePath);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ObjectHandle )( 
+            IDTDisplay * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Repaint )( 
+            IDTDisplay * This);
+        
+        END_INTERFACE
+    } IDTDisplayVtbl;
+
+    interface IDTDisplay
+    {
+        CONST_VTBL struct IDTDisplayVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IDTDisplay_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IDTDisplay_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IDTDisplay_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IDTDisplay_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define IDTDisplay_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define IDTDisplay_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define IDTDisplay_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+
+#define IDTDisplay_get_ImgWidth(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImgWidth(This,pVal) ) 
+
+#define IDTDisplay_put_ImgWidth(This,newVal)	\
+    ( (This)->lpVtbl -> put_ImgWidth(This,newVal) ) 
+
+#define IDTDisplay_get_ImgHeight(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImgHeight(This,pVal) ) 
+
+#define IDTDisplay_put_ImgHeight(This,newVal)	\
+    ( (This)->lpVtbl -> put_ImgHeight(This,newVal) ) 
+
+#define IDTDisplay_get_Gamma(This,pVal)	\
+    ( (This)->lpVtbl -> get_Gamma(This,pVal) ) 
+
+#define IDTDisplay_put_Gamma(This,newVal)	\
+    ( (This)->lpVtbl -> put_Gamma(This,newVal) ) 
+
+#define IDTDisplay_get_MapStart(This,pVal)	\
+    ( (This)->lpVtbl -> get_MapStart(This,pVal) ) 
+
+#define IDTDisplay_put_MapStart(This,newVal)	\
+    ( (This)->lpVtbl -> put_MapStart(This,newVal) ) 
+
+#define IDTDisplay_get_MapEnd(This,pVal)	\
+    ( (This)->lpVtbl -> get_MapEnd(This,pVal) ) 
+
+#define IDTDisplay_put_MapEnd(This,newVal)	\
+    ( (This)->lpVtbl -> put_MapEnd(This,newVal) ) 
+
+#define IDTDisplay_get_DataSource(This,pVal)	\
+    ( (This)->lpVtbl -> get_DataSource(This,pVal) ) 
+
+#define IDTDisplay_put_DataSource(This,newVal)	\
+    ( (This)->lpVtbl -> put_DataSource(This,newVal) ) 
+
+#define IDTDisplay_get_DisplayControl(This,pVal)	\
+    ( (This)->lpVtbl -> get_DisplayControl(This,pVal) ) 
+
+#define IDTDisplay_put_DisplayControl(This,newVal)	\
+    ( (This)->lpVtbl -> put_DisplayControl(This,newVal) ) 
+
+#define IDTDisplay_Open(This,bOK)	\
+    ( (This)->lpVtbl -> Open(This,bOK) ) 
+
+#define IDTDisplay_Close(This)	\
+    ( (This)->lpVtbl -> Close(This) ) 
+
+#define IDTDisplay_get_RefreshMode(This,pVal)	\
+    ( (This)->lpVtbl -> get_RefreshMode(This,pVal) ) 
+
+#define IDTDisplay_put_RefreshMode(This,newVal)	\
+    ( (This)->lpVtbl -> put_RefreshMode(This,newVal) ) 
+
+#define IDTDisplay_get_RefreshRate(This,pVal)	\
+    ( (This)->lpVtbl -> get_RefreshRate(This,pVal) ) 
+
+#define IDTDisplay_put_RefreshRate(This,newVal)	\
+    ( (This)->lpVtbl -> put_RefreshRate(This,newVal) ) 
+
+#define IDTDisplay_get_ImageObject(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImageObject(This,pVal) ) 
+
+#define IDTDisplay_get_DisplayScale(This,pVal)	\
+    ( (This)->lpVtbl -> get_DisplayScale(This,pVal) ) 
+
+#define IDTDisplay_put_DisplayScale(This,newVal)	\
+    ( (This)->lpVtbl -> put_DisplayScale(This,newVal) ) 
+
+#define IDTDisplay_Refresh(This)	\
+    ( (This)->lpVtbl -> Refresh(This) ) 
+
+#define IDTDisplay_get_OrgPoint_X(This,pVal)	\
+    ( (This)->lpVtbl -> get_OrgPoint_X(This,pVal) ) 
+
+#define IDTDisplay_put_OrgPoint_X(This,newVal)	\
+    ( (This)->lpVtbl -> put_OrgPoint_X(This,newVal) ) 
+
+#define IDTDisplay_get_OrgPoint_Y(This,pVal)	\
+    ( (This)->lpVtbl -> get_OrgPoint_Y(This,pVal) ) 
+
+#define IDTDisplay_put_OrgPoint_Y(This,newVal)	\
+    ( (This)->lpVtbl -> put_OrgPoint_Y(This,newVal) ) 
+
+#define IDTDisplay_Load(This,FilePath)	\
+    ( (This)->lpVtbl -> Load(This,FilePath) ) 
+
+#define IDTDisplay_Save(This,FilePath)	\
+    ( (This)->lpVtbl -> Save(This,FilePath) ) 
+
+#define IDTDisplay_get_ObjectHandle(This,pVal)	\
+    ( (This)->lpVtbl -> get_ObjectHandle(This,pVal) ) 
+
+#define IDTDisplay_Repaint(This)	\
+    ( (This)->lpVtbl -> Repaint(This) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IDTDisplay_INTERFACE_DEFINED__ */
+
+
+#ifndef __IDTImage_INTERFACE_DEFINED__
+#define __IDTImage_INTERFACE_DEFINED__
+
+/* interface IDTImage */
+/* [unique][helpstring][dual][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IDTImage;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("05A512FA-9E1F-4F7D-BE82-6FBECE81A17D")
+    IDTImage : public IDispatch
+    {
+    public:
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgHeight( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgHeight( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImgWidth( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImgWidth( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BytesPerPixel( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_BytesPerPixel( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ChannelType( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ChannelType( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImagePort( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ImagePort( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_DetectorObject( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_DetectorObject( 
+            /* [in] */ IUnknown *newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_IsOpened( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_LastErrID( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Open( 
+            /* [retval][out] */ LONG *bOK) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Close( void) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Grab( 
+            /* [in] */ LONG FrameNum,
+            /* [retval][out] */ LONG *bOK) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Snap( 
+            /* [in] */ LONG FrameNum,
+            /* [retval][out] */ LONG *bOK) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE PrintErrMsg( 
+            /* [in] */ LONG ErrID,
+            /* [out] */ BSTR *ErrMsg) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_SubFrameHeight( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_SubFrameHeight( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Stop( void) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_IsGrabing( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ImageObject( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_BandWidth( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ObjectHandle( 
+            /* [retval][out] */ IUnknown **pVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TimeOut( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_TimeOut( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_ExFrameTrigger( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_ExFrameTrigger( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_DualScanMode( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_DualScanMode( 
+            /* [in] */ LONG newVal) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE OpenMemImage( 
+            /* [in] */ LONG width,
+            /* [in] */ LONG height,
+            /* [in] */ BYTE *data) = 0;
+        
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct IDTImageVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IDTImage * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            __RPC__deref_out  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IDTImage * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IDTImage * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            IDTImage * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            IDTImage * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            IDTImage * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            IDTImage * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgHeight )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgHeight )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImgWidth )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImgWidth )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BytesPerPixel )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_BytesPerPixel )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ChannelType )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ChannelType )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImagePort )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ImagePort )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DetectorObject )( 
+            IDTImage * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DetectorObject )( 
+            IDTImage * This,
+            /* [in] */ IUnknown *newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_IsOpened )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_LastErrID )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Open )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *bOK);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Close )( 
+            IDTImage * This);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Grab )( 
+            IDTImage * This,
+            /* [in] */ LONG FrameNum,
+            /* [retval][out] */ LONG *bOK);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Snap )( 
+            IDTImage * This,
+            /* [in] */ LONG FrameNum,
+            /* [retval][out] */ LONG *bOK);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *PrintErrMsg )( 
+            IDTImage * This,
+            /* [in] */ LONG ErrID,
+            /* [out] */ BSTR *ErrMsg);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SubFrameHeight )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_SubFrameHeight )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *Stop )( 
+            IDTImage * This);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_IsGrabing )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ImageObject )( 
+            IDTImage * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_BandWidth )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ObjectHandle )( 
+            IDTImage * This,
+            /* [retval][out] */ IUnknown **pVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_TimeOut )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_TimeOut )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ExFrameTrigger )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_ExFrameTrigger )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_DualScanMode )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_DualScanMode )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *OpenMemImage )( 
+            IDTImage * This,
+            /* [in] */ LONG width,
+            /* [in] */ LONG height,
+            /* [in] */ BYTE *data);
+        
+        END_INTERFACE
+    } IDTImageVtbl;
+
+    interface IDTImage
+    {
+        CONST_VTBL struct IDTImageVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IDTImage_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IDTImage_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IDTImage_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IDTImage_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define IDTImage_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define IDTImage_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define IDTImage_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+
+#define IDTImage_get_ImgHeight(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImgHeight(This,pVal) ) 
+
+#define IDTImage_put_ImgHeight(This,newVal)	\
+    ( (This)->lpVtbl -> put_ImgHeight(This,newVal) ) 
+
+#define IDTImage_get_ImgWidth(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImgWidth(This,pVal) ) 
+
+#define IDTImage_put_ImgWidth(This,newVal)	\
+    ( (This)->lpVtbl -> put_ImgWidth(This,newVal) ) 
+
+#define IDTImage_get_BytesPerPixel(This,pVal)	\
+    ( (This)->lpVtbl -> get_BytesPerPixel(This,pVal) ) 
+
+#define IDTImage_put_BytesPerPixel(This,newVal)	\
+    ( (This)->lpVtbl -> put_BytesPerPixel(This,newVal) ) 
+
+#define IDTImage_get_ChannelType(This,pVal)	\
+    ( (This)->lpVtbl -> get_ChannelType(This,pVal) ) 
+
+#define IDTImage_put_ChannelType(This,newVal)	\
+    ( (This)->lpVtbl -> put_ChannelType(This,newVal) ) 
+
+#define IDTImage_get_ImagePort(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImagePort(This,pVal) ) 
+
+#define IDTImage_put_ImagePort(This,newVal)	\
+    ( (This)->lpVtbl -> put_ImagePort(This,newVal) ) 
+
+#define IDTImage_get_DetectorObject(This,pVal)	\
+    ( (This)->lpVtbl -> get_DetectorObject(This,pVal) ) 
+
+#define IDTImage_put_DetectorObject(This,newVal)	\
+    ( (This)->lpVtbl -> put_DetectorObject(This,newVal) ) 
+
+#define IDTImage_get_IsOpened(This,pVal)	\
+    ( (This)->lpVtbl -> get_IsOpened(This,pVal) ) 
+
+#define IDTImage_get_LastErrID(This,pVal)	\
+    ( (This)->lpVtbl -> get_LastErrID(This,pVal) ) 
+
+#define IDTImage_Open(This,bOK)	\
+    ( (This)->lpVtbl -> Open(This,bOK) ) 
+
+#define IDTImage_Close(This)	\
+    ( (This)->lpVtbl -> Close(This) ) 
+
+#define IDTImage_Grab(This,FrameNum,bOK)	\
+    ( (This)->lpVtbl -> Grab(This,FrameNum,bOK) ) 
+
+#define IDTImage_Snap(This,FrameNum,bOK)	\
+    ( (This)->lpVtbl -> Snap(This,FrameNum,bOK) ) 
+
+#define IDTImage_PrintErrMsg(This,ErrID,ErrMsg)	\
+    ( (This)->lpVtbl -> PrintErrMsg(This,ErrID,ErrMsg) ) 
+
+#define IDTImage_get_SubFrameHeight(This,pVal)	\
+    ( (This)->lpVtbl -> get_SubFrameHeight(This,pVal) ) 
+
+#define IDTImage_put_SubFrameHeight(This,newVal)	\
+    ( (This)->lpVtbl -> put_SubFrameHeight(This,newVal) ) 
+
+#define IDTImage_Stop(This)	\
+    ( (This)->lpVtbl -> Stop(This) ) 
+
+#define IDTImage_get_IsGrabing(This,pVal)	\
+    ( (This)->lpVtbl -> get_IsGrabing(This,pVal) ) 
+
+#define IDTImage_get_ImageObject(This,pVal)	\
+    ( (This)->lpVtbl -> get_ImageObject(This,pVal) ) 
+
+#define IDTImage_get_BandWidth(This,pVal)	\
+    ( (This)->lpVtbl -> get_BandWidth(This,pVal) ) 
+
+#define IDTImage_get_ObjectHandle(This,pVal)	\
+    ( (This)->lpVtbl -> get_ObjectHandle(This,pVal) ) 
+
+#define IDTImage_get_TimeOut(This,pVal)	\
+    ( (This)->lpVtbl -> get_TimeOut(This,pVal) ) 
+
+#define IDTImage_put_TimeOut(This,newVal)	\
+    ( (This)->lpVtbl -> put_TimeOut(This,newVal) ) 
+
+#define IDTImage_get_ExFrameTrigger(This,pVal)	\
+    ( (This)->lpVtbl -> get_ExFrameTrigger(This,pVal) ) 
+
+#define IDTImage_put_ExFrameTrigger(This,newVal)	\
+    ( (This)->lpVtbl -> put_ExFrameTrigger(This,newVal) ) 
+
+#define IDTImage_get_DualScanMode(This,pVal)	\
+    ( (This)->lpVtbl -> get_DualScanMode(This,pVal) ) 
+
+#define IDTImage_put_DualScanMode(This,newVal)	\
+    ( (This)->lpVtbl -> put_DualScanMode(This,newVal) ) 
+
+#define IDTImage_OpenMemImage(This,width,height,data)	\
+    ( (This)->lpVtbl -> OpenMemImage(This,width,height,data) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IDTImage_INTERFACE_DEFINED__ */
+
+
 
 #ifndef __DTControl_LIBRARY_DEFINED__
 #define __DTControl_LIBRARY_DEFINED__
@@ -2615,11 +2615,356 @@ EXTERN_C const IID IID_IDTCommanderF3;
 
 EXTERN_C const IID LIBID_DTControl;
 
+#ifndef ___IDTDisplayControlEvents_DISPINTERFACE_DEFINED__
+#define ___IDTDisplayControlEvents_DISPINTERFACE_DEFINED__
+
+/* dispinterface _IDTDisplayControlEvents */
+/* [helpstring][uuid] */ 
+
+
+EXTERN_C const IID DIID__IDTDisplayControlEvents;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+
+    MIDL_INTERFACE("51F345B5-044F-49F2-A824-59B2869CEF23")
+    _IDTDisplayControlEvents : public IDispatch
+    {
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct _IDTDisplayControlEventsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            _IDTDisplayControlEvents * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            __RPC__deref_out  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            _IDTDisplayControlEvents * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            _IDTDisplayControlEvents * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            _IDTDisplayControlEvents * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            _IDTDisplayControlEvents * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            _IDTDisplayControlEvents * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            _IDTDisplayControlEvents * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        END_INTERFACE
+    } _IDTDisplayControlEventsVtbl;
+
+    interface _IDTDisplayControlEvents
+    {
+        CONST_VTBL struct _IDTDisplayControlEventsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define _IDTDisplayControlEvents_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define _IDTDisplayControlEvents_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define _IDTDisplayControlEvents_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define _IDTDisplayControlEvents_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define _IDTDisplayControlEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define _IDTDisplayControlEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define _IDTDisplayControlEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+#endif 	/* ___IDTDisplayControlEvents_DISPINTERFACE_DEFINED__ */
+
+
+EXTERN_C const CLSID CLSID_CDTDisplayControl;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("14B6C482-806F-4171-AEA4-FB424E07A758")
+CDTDisplayControl;
+#endif
+
+#ifndef ___IDTDetectorEvents_DISPINTERFACE_DEFINED__
+#define ___IDTDetectorEvents_DISPINTERFACE_DEFINED__
+
+/* dispinterface _IDTDetectorEvents */
+/* [helpstring][uuid] */ 
+
+
+EXTERN_C const IID DIID__IDTDetectorEvents;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+
+    MIDL_INTERFACE("B3E172CD-8F54-4910-AA06-61B8D3ECD986")
+    _IDTDetectorEvents : public IDispatch
+    {
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct _IDTDetectorEventsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            _IDTDetectorEvents * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            __RPC__deref_out  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            _IDTDetectorEvents * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            _IDTDetectorEvents * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            _IDTDetectorEvents * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            _IDTDetectorEvents * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            _IDTDetectorEvents * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            _IDTDetectorEvents * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        END_INTERFACE
+    } _IDTDetectorEventsVtbl;
+
+    interface _IDTDetectorEvents
+    {
+        CONST_VTBL struct _IDTDetectorEventsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define _IDTDetectorEvents_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define _IDTDetectorEvents_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define _IDTDetectorEvents_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define _IDTDetectorEvents_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define _IDTDetectorEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define _IDTDetectorEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define _IDTDetectorEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+#endif 	/* ___IDTDetectorEvents_DISPINTERFACE_DEFINED__ */
+
+
+EXTERN_C const CLSID CLSID_CDTDetector;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("81B889F3-33FC-40CD-A98B-4487723F5A3B")
+CDTDetector;
+#endif
+
+#ifndef ___IDTCommanderF3Events_DISPINTERFACE_DEFINED__
+#define ___IDTCommanderF3Events_DISPINTERFACE_DEFINED__
+
+/* dispinterface _IDTCommanderF3Events */
+/* [helpstring][uuid] */ 
+
+
+EXTERN_C const IID DIID__IDTCommanderF3Events;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+
+    MIDL_INTERFACE("3F2A6451-EC6C-4948-9C07-7764FA64A894")
+    _IDTCommanderF3Events : public IDispatch
+    {
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct _IDTCommanderF3EventsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            _IDTCommanderF3Events * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            __RPC__deref_out  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            _IDTCommanderF3Events * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            _IDTCommanderF3Events * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            _IDTCommanderF3Events * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            _IDTCommanderF3Events * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            _IDTCommanderF3Events * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            _IDTCommanderF3Events * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        END_INTERFACE
+    } _IDTCommanderF3EventsVtbl;
+
+    interface _IDTCommanderF3Events
+    {
+        CONST_VTBL struct _IDTCommanderF3EventsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define _IDTCommanderF3Events_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define _IDTCommanderF3Events_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define _IDTCommanderF3Events_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define _IDTCommanderF3Events_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define _IDTCommanderF3Events_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define _IDTCommanderF3Events_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define _IDTCommanderF3Events_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+#endif 	/* ___IDTCommanderF3Events_DISPINTERFACE_DEFINED__ */
+
+
+EXTERN_C const CLSID CLSID_CDTCommanderF3;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("B08859A2-D75E-4B6D-8C13-A80DAD7BA087")
+CDTCommanderF3;
+#endif
+
 EXTERN_C const CLSID CLSID_CImageObject;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("C3BDF6C3-7738-41FE-97F9-618B28F4F82B")
+class DECLSPEC_UUID("25874CDE-5C8A-486D-855D-C8DE1FFBEE8A")
 CImageObject;
 #endif
 
@@ -2634,7 +2979,7 @@ EXTERN_C const IID DIID__IDTDisplayEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("8148D9F9-5ED2-4373-AB88-519E0C22B536")
+    MIDL_INTERFACE("CD1AAF81-A669-47B7-94A0-5A2A1FBA4439")
     _IDTDisplayEvents : public IDispatch
     {
     };
@@ -2738,121 +3083,6 @@ class DECLSPEC_UUID("F984B792-41DB-4D78-95A7-1C80E40938FD")
 CDTDisplay;
 #endif
 
-#ifndef ___IDTDetectorEvents_DISPINTERFACE_DEFINED__
-#define ___IDTDetectorEvents_DISPINTERFACE_DEFINED__
-
-/* dispinterface _IDTDetectorEvents */
-/* [helpstring][uuid] */ 
-
-
-EXTERN_C const IID DIID__IDTDetectorEvents;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-
-    MIDL_INTERFACE("A5EC5E3E-B102-46A7-B589-1B6ADD9EAC03")
-    _IDTDetectorEvents : public IDispatch
-    {
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct _IDTDetectorEventsVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            _IDTDetectorEvents * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            _IDTDetectorEvents * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            _IDTDetectorEvents * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            _IDTDetectorEvents * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            _IDTDetectorEvents * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            _IDTDetectorEvents * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            _IDTDetectorEvents * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        END_INTERFACE
-    } _IDTDetectorEventsVtbl;
-
-    interface _IDTDetectorEvents
-    {
-        CONST_VTBL struct _IDTDetectorEventsVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define _IDTDetectorEvents_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define _IDTDetectorEvents_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define _IDTDetectorEvents_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define _IDTDetectorEvents_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define _IDTDetectorEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define _IDTDetectorEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define _IDTDetectorEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-#endif 	/* ___IDTDetectorEvents_DISPINTERFACE_DEFINED__ */
-
-
-EXTERN_C const CLSID CLSID_CDTDetector;
-
-#ifdef __cplusplus
-
-class DECLSPEC_UUID("D3120961-C570-471D-B62E-5B2636502D85")
-CDTDetector;
-#endif
-
 #ifndef ___IDTImageEvents_DISPINTERFACE_DEFINED__
 #define ___IDTImageEvents_DISPINTERFACE_DEFINED__
 
@@ -2864,7 +3094,7 @@ EXTERN_C const IID DIID__IDTImageEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
-    MIDL_INTERFACE("340DAB3D-DAC5-4E95-BE22-677A68039526")
+    MIDL_INTERFACE("41BE7653-30F4-461F-87A1-4BAB1F8C8B33")
     _IDTImageEvents : public IDispatch
     {
     };
@@ -2964,238 +3194,8 @@ EXTERN_C const CLSID CLSID_CDTImage;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("ADDEC18D-6A72-4873-9BE7-B708463B8ADC")
+class DECLSPEC_UUID("137E0C10-17BC-4F16-BFFE-5C1E7725C8EA")
 CDTImage;
-#endif
-
-#ifndef ___IDTDisplayControlEvents_DISPINTERFACE_DEFINED__
-#define ___IDTDisplayControlEvents_DISPINTERFACE_DEFINED__
-
-/* dispinterface _IDTDisplayControlEvents */
-/* [helpstring][uuid] */ 
-
-
-EXTERN_C const IID DIID__IDTDisplayControlEvents;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-
-    MIDL_INTERFACE("B71C75E1-3CB0-40E7-A8B1-6FCEE7A479CF")
-    _IDTDisplayControlEvents : public IDispatch
-    {
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct _IDTDisplayControlEventsVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            _IDTDisplayControlEvents * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            _IDTDisplayControlEvents * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            _IDTDisplayControlEvents * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            _IDTDisplayControlEvents * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            _IDTDisplayControlEvents * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            _IDTDisplayControlEvents * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            _IDTDisplayControlEvents * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        END_INTERFACE
-    } _IDTDisplayControlEventsVtbl;
-
-    interface _IDTDisplayControlEvents
-    {
-        CONST_VTBL struct _IDTDisplayControlEventsVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define _IDTDisplayControlEvents_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define _IDTDisplayControlEvents_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define _IDTDisplayControlEvents_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define _IDTDisplayControlEvents_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define _IDTDisplayControlEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define _IDTDisplayControlEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define _IDTDisplayControlEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-#endif 	/* ___IDTDisplayControlEvents_DISPINTERFACE_DEFINED__ */
-
-
-EXTERN_C const CLSID CLSID_CDTDisplayControl;
-
-#ifdef __cplusplus
-
-class DECLSPEC_UUID("DCE3040A-003A-4325-9FAE-C5A9DA79203C")
-CDTDisplayControl;
-#endif
-
-#ifndef ___IDTCommanderF3Events_DISPINTERFACE_DEFINED__
-#define ___IDTCommanderF3Events_DISPINTERFACE_DEFINED__
-
-/* dispinterface _IDTCommanderF3Events */
-/* [helpstring][uuid] */ 
-
-
-EXTERN_C const IID DIID__IDTCommanderF3Events;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-
-    MIDL_INTERFACE("6A7003E6-BA52-45D8-8ACE-1700CB01E70A")
-    _IDTCommanderF3Events : public IDispatch
-    {
-    };
-    
-#else 	/* C style interface */
-
-    typedef struct _IDTCommanderF3EventsVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            _IDTCommanderF3Events * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            __RPC__deref_out  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            _IDTCommanderF3Events * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            _IDTCommanderF3Events * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            _IDTCommanderF3Events * This,
-            /* [out] */ UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            _IDTCommanderF3Events * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            _IDTCommanderF3Events * This,
-            /* [in] */ REFIID riid,
-            /* [size_is][in] */ LPOLESTR *rgszNames,
-            /* [range][in] */ UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            _IDTCommanderF3Events * This,
-            /* [in] */ DISPID dispIdMember,
-            /* [in] */ REFIID riid,
-            /* [in] */ LCID lcid,
-            /* [in] */ WORD wFlags,
-            /* [out][in] */ DISPPARAMS *pDispParams,
-            /* [out] */ VARIANT *pVarResult,
-            /* [out] */ EXCEPINFO *pExcepInfo,
-            /* [out] */ UINT *puArgErr);
-        
-        END_INTERFACE
-    } _IDTCommanderF3EventsVtbl;
-
-    interface _IDTCommanderF3Events
-    {
-        CONST_VTBL struct _IDTCommanderF3EventsVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define _IDTCommanderF3Events_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define _IDTCommanderF3Events_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define _IDTCommanderF3Events_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define _IDTCommanderF3Events_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define _IDTCommanderF3Events_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define _IDTCommanderF3Events_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define _IDTCommanderF3Events_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-#endif 	/* ___IDTCommanderF3Events_DISPINTERFACE_DEFINED__ */
-
-
-EXTERN_C const CLSID CLSID_CDTCommanderF3;
-
-#ifdef __cplusplus
-
-class DECLSPEC_UUID("7D934547-7258-4C06-9AD3-A3143E9056CA")
-CDTCommanderF3;
 #endif
 #endif /* __DTControl_LIBRARY_DEFINED__ */
 
