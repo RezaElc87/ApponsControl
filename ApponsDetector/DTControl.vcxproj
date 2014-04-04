@@ -331,6 +331,7 @@
     <ClCompile Include="IDipslayControlEventSink.cpp" />
     <ClCompile Include="IDTImageEventSink.cpp" />
     <ClCompile Include="ImageObject.cpp" />
+    <ClCompile Include="LineProcessor.cpp" />
     <ClCompile Include="NETDataSrc.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -365,6 +366,7 @@
     <ClInclude Include="IDipslayControlEventSink.h" />
     <ClInclude Include="IDTImageEventSink.h" />
     <ClInclude Include="ImageObject.h" />
+    <ClInclude Include="LineProcessor.h" />
     <ClInclude Include="NETDataSrc.h" />
     <ClInclude Include="pixelorderconverter.h" />
     <ClInclude Include="Resource.h" />

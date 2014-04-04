@@ -93,6 +93,9 @@
     <ClCompile Include="USBDataSrc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LineProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DisplayControl.h">
@@ -183,6 +186,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pixelorderconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LineProcessor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
