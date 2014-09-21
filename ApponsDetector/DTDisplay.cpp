@@ -853,12 +853,14 @@ LRESULT CDTDisplay::OnRefresh(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*
 	{
 		m_DisplayImage.Draw(m_hMemDC,&m_DrawRect);
 		InvalidateRect(&m_DrawRect,FALSE);
-		BitBlt(this->GetDC(), 
+		HDC hdc = this->GetDC();
+		BitBlt(hdc, 
                0,0, 
                 m_WndWidth,m_WndHeight,
                 m_hMemDC, 
                 0,0, 
-                SRCCOPY); 
+                SRCCOPY);
+		ReleaseDC(hdc);
 	}
 	return 0;
 }
