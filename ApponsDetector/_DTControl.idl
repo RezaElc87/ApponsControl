@@ -1,11 +1,11 @@
-import "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\prsht.idl";
-import "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\mshtml.idl";
-import "c:\program files (x86)\microsoft sdks\windows\v7.0a\include\dimm.idl";
-import "c:\program files (x86)\microsoft sdks\windows\v7.0a\include\dispex.idl";
-import "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\mshtmhst.idl";
-import "c:\program files (x86)\microsoft sdks\windows\v7.0a\include\docobj.idl";
-import "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\exdisp.idl";
-import "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\objsafe.idl";
+import "C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\prsht.idl";
+import "C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\mshtml.idl";
+import "c:\program files\microsoft sdks\windows\v7.0a\include\dimm.idl";
+import "c:\program files\microsoft sdks\windows\v7.0a\include\dispex.idl";
+import "C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\mshtmhst.idl";
+import "c:\program files\microsoft sdks\windows\v7.0a\include\docobj.idl";
+import "C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\exdisp.idl";
+import "C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\objsafe.idl";
 
 [
 	object,
@@ -14,15 +14,15 @@ import "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\objsafe.idl"
 	helpstring("IDTDisplayControl Interface"),
 	pointer_default(unique)
 ] 
-#line 15 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 15 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 interface IDTDisplayControl : IDispatch {
-#line 18 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 18 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 	[propput,bindable,requestedit,id(-500)] HRESULT  AutoSize([in] VARIANT_BOOL vbool);
-#line 20 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 20 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 	[propget,bindable,requestedit,id(-500)] HRESULT  AutoSize([out,retval] VARIANT_BOOL *pbool);
-#line 22 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 22 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 	[propput,bindable,requestedit,id(-519)] HRESULT  BorderVisible([in] VARIANT_BOOL vbool);
-#line 24 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 24 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 	[propget,bindable,requestedit,id(-519)] HRESULT  BorderVisible([out,retval] VARIANT_BOOL *pbool);
 	[propget,id(1),helpstring("property Object")] HRESULT  Object([out,retval] IUnknown **pVal);
 };
@@ -34,9 +34,9 @@ interface IDTDisplayControl : IDispatch {
 	helpstring("IDTDetector Interface"),
 	pointer_default(unique)
 ] 
-#line 18 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdetector.h"
+#line 18 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdetector.h"
 interface IDTDetector : IDispatch {
-#line 20 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdetector.h"
+#line 20 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdetector.h"
 	[propget,id(1),helpstring("property IPAddress")] HRESULT  IPAddress([out,retval] BSTR *pVal);
 	[propput,id(1),helpstring("property IPAddress")] HRESULT  IPAddress([in] BSTR newVal);
 	[propget,id(2),helpstring("property CmdPort")] HRESULT  CmdPort([out,retval] LONG *pVal);
@@ -66,13 +66,13 @@ interface IDTDetector : IDispatch {
 	helpstring("IDTCommanderF3 Interface"),
 	pointer_default(unique)
 ] 
-#line 17 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtcommander.h"
+#line 17 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtcommander.h"
 interface IDTCommanderF3 : IDispatch {
-#line 19 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtcommander.h"
+#line 19 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtcommander.h"
 	[propget,id(1),helpstring("property DetectorObject")] HRESULT  DetectorObject([out,retval] IUnknown **pVal);
 	[propput,id(1),helpstring("property DetectorObject")] HRESULT  DetectorObject([in] IUnknown *newVal);
 	[id(2),helpstring("method OffBoardCalibration")] HRESULT  OffBoardCalibration([in] LONG CalibrationType, [in] IUnknown *pImgObject, [in] LONG StartPixel, [in] LONG EndPixel, [in] LONG TargetValue);
-#line 23 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtcommander.h"
+#line 23 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtcommander.h"
 	[propget,id(3),helpstring("property Gain")] HRESULT  Gain([in] LONG Index, [out,retval] FLOAT *pVal);
 	[propput,id(3),helpstring("property Gain")] HRESULT  Gain([in] LONG Index, [in] FLOAT newVal);
 	[propget,id(4),helpstring("property Offset")] HRESULT  Offset([in] LONG Index, [out,retval] LONG *pVal);
@@ -133,7 +133,7 @@ interface IDTCommanderF3 : IDispatch {
 	[propget,id(41),helpstring("property FPGA_Version")] HRESULT  FPGA_Version([out,retval] LONG *pVal);
 	[propget,id(42),helpstring("property FPGA_Build")] HRESULT  FPGA_Build([out,retval] LONG *pVal);
 	[propget,id(43),helpstring("property MCU_Version")] HRESULT  MCU_Version([out,retval] LONG *pVal);
-#line 84 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtcommander.h"
+#line 84 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtcommander.h"
 	[propget,id(44),helpstring("property SerialNumber")] HRESULT  SerialNumber([out,retval] BSTR *pVal);
 	[id(45),helpstring("method RetrieveSysinfo")] HRESULT  RetrieveSysinfo();
 };
@@ -145,9 +145,9 @@ interface IDTCommanderF3 : IDispatch {
 	helpstring("IImageObject Interface"),
 	pointer_default(unique)
 ] 
-#line 15 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\imageobject.h"
+#line 15 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\imageobject.h"
 interface IImageObject : IDispatch {
-#line 17 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\imageobject.h"
+#line 17 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\imageobject.h"
 	[propget,id(1),helpstring("property ImageDataAddress")] HRESULT  ImageDataAddress([out,retval] LONG *pVal);
 	[propput,id(1),helpstring("property ImageDataAddress")] HRESULT  ImageDataAddress([in] LONG newVal);
 	[propget,id(2),helpstring("property Width")] HRESULT  Width([out,retval] LONG *pVal);
@@ -176,29 +176,29 @@ interface IImageObject : IDispatch {
 	helpstring("IDTDisplay Interface"),
 	pointer_default(unique)
 ] 
-#line 23 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 23 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 interface IDTDisplay : IDispatch {
-#line 25 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 25 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	[propget,id(1),helpstring("property Width")] HRESULT  ImgWidth([out,retval] ULONG *pVal);
 	[propput,id(1),helpstring("property Width")] HRESULT  ImgWidth([in] ULONG newVal);
 	[propget,id(2),helpstring("property Height")] HRESULT  ImgHeight([out,retval] ULONG *pVal);
 	[propput,id(2),helpstring("property Height")] HRESULT  ImgHeight([in] ULONG newVal);
-#line 30 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 30 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	[propget,id(3),helpstring("property Gamma")] HRESULT  Gamma([out,retval] FLOAT *pVal);
 	[propput,id(3),helpstring("property Gamma")] HRESULT  Gamma([in] FLOAT newVal);
 	[propget,id(4),helpstring("property MapStart")] HRESULT  MapStart([out,retval] LONG *pVal);
 	[propput,id(4),helpstring("property MapStart")] HRESULT  MapStart([in] LONG newVal);
 	[propget,id(5),helpstring("property MapEnd")] HRESULT  MapEnd([out,retval] LONG *pVal);
 	[propput,id(5),helpstring("property MapEnd")] HRESULT  MapEnd([in] LONG newVal);
-#line 37 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 37 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	[propget,id(6),helpstring("property DataSource")] HRESULT  DataSource([out,retval] IUnknown **pVal);
 	[propput,id(6),helpstring("property DataSource")] HRESULT  DataSource([in] IUnknown *newVal);
 	[propget,id(7),helpstring("property DisplayControl")] HRESULT  DisplayControl([out,retval] IUnknown **pVal);
 	[propput,id(7),helpstring("property DisplayControl")] HRESULT  DisplayControl([in] IUnknown *newVal);
-#line 42 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 42 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	[id(8),helpstring("method Open")] HRESULT  Open([out,retval] LONG *bOK);
 	[id(9),helpstring("method Close")] HRESULT  Close();
-#line 45 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 45 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	[propget,id(10),helpstring("property RefreshMode")] HRESULT  RefreshMode([out,retval] LONG *pVal);
 	[propput,id(10),helpstring("property RefreshMode")] HRESULT  RefreshMode([in] LONG newVal);
 	[propget,id(11),helpstring("property RefreshRate")] HRESULT  RefreshRate([out,retval] LONG *pVal);
@@ -206,7 +206,7 @@ interface IDTDisplay : IDispatch {
 	[propget,id(12),helpstring("property ImageObject")] HRESULT  ImageObject([out,retval] IUnknown **pVal);
 	[propget,id(13),helpstring("property DisplayScale")] HRESULT  DisplayScale([out,retval] LONG *pVal);
 	[propput,id(13),helpstring("property DisplayScale")] HRESULT  DisplayScale([in] LONG newVal);
-#line 53 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 53 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	[id(14),helpstring("method Refresh")] HRESULT  Refresh();
 	[propget,id(15),helpstring("property OrgPoint_X")] HRESULT  OrgPoint_X([out,retval] LONG *pVal);
 	[propput,id(15),helpstring("property OrgPoint_X")] HRESULT  OrgPoint_X([in] LONG newVal);
@@ -225,9 +225,9 @@ interface IDTDisplay : IDispatch {
 	helpstring("IDTImage Interface"),
 	pointer_default(unique)
 ] 
-#line 29 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtimage.h"
+#line 29 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtimage.h"
 interface IDTImage : IDispatch {
-#line 31 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtimage.h"
+#line 31 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtimage.h"
 	[propget,id(1),helpstring("property ImgHeight")] HRESULT  ImgHeight([out,retval] LONG *pVal);
 	[propput,id(1),helpstring("property ImgHeight")] HRESULT  ImgHeight([in] LONG newVal);
 	[propget,id(2),helpstring("property ImgWidth")] HRESULT  ImgWidth([out,retval] LONG *pVal);
@@ -247,7 +247,7 @@ interface IDTImage : IDispatch {
 	[id(11),helpstring("method Grab")] HRESULT  Grab([in] LONG FrameNum, [out,retval] LONG *bOK);
 	[id(12),helpstring("method Snap")] HRESULT  Snap([in] LONG FrameNum, [out,retval] LONG *bOK);
 	[id(13),helpstring("method PrintErrMsg")] HRESULT  PrintErrMsg([in] LONG ErrID, [out] BSTR *ErrMsg);
-#line 51 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtimage.h"
+#line 51 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtimage.h"
 	[propget,id(15),helpstring("property SubFrameHeight")] HRESULT  SubFrameHeight([out,retval] LONG *pVal);
 	[propput,id(15),helpstring("property SubFrameHeight")] HRESULT  SubFrameHeight([in] LONG newVal);
 	[id(16),helpstring("method Stop")] HRESULT  Stop();
@@ -262,7 +262,7 @@ interface IDTImage : IDispatch {
 	[propget,id(23)] HRESULT  DualScanMode([out,retval] LONG *pVal);
 	[propput,id(23)] HRESULT  DualScanMode([in] LONG newVal);
 	[id(24)] HRESULT  OpenMemImage([in]LONG width, [in]LONG height, [in]BYTE *data);
-#line 67 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtimage.h"
+#line 67 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtimage.h"
 	[propget,id(25)] HRESULT  OffsetEnable([out,retval] BYTE *pVal);
 	[propput,id(25)] HRESULT  OffsetEnable([in] BYTE newVal);
 	[propget,id(26)] HRESULT  GainEnable([out,retval] BYTE *pVal);
@@ -275,6 +275,8 @@ interface IDTImage : IDispatch {
 	[id(31)] HRESULT  GainArrayCal();
 	[propget,id(32)] HRESULT  arrayCorrectionEnable([out,retval] BYTE *pVal);
 	[propput,id(32)] HRESULT  arrayCorrectionEnable([in] BYTE newVal);
+	[propget,id(33)] HRESULT  Revert([out,retval] LONG *pVal);
+	[propput,id(33)] HRESULT  Revert([in] LONG newVal);
 };
 
 
@@ -288,7 +290,7 @@ library DTControl
 		uuid(51F345B5-044F-49F2-A824-59B2869CEF23),
 		helpstring("_IDTDisplayControlEvents Interface")
 	] 
-#line 37 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 37 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 	dispinterface _IDTDisplayControlEvents {
 	properties:
 
@@ -300,7 +302,7 @@ library DTControl
 		uuid(14B6C482-806F-4171-AEA4-FB424E07A758),
 		helpstring("DTDisplayControl Class")
 	] 
-#line 54 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\displaycontrol.h"
+#line 54 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\displaycontrol.h"
 	coclass CDTDisplayControl {
 		interface IDTDisplayControl;
 		[default, source]	interface _IDTDisplayControlEvents;
@@ -310,7 +312,7 @@ library DTControl
 		uuid(B3E172CD-8F54-4910-AA06-61B8D3ECD986),
 		helpstring("_IDTDetectorEvents Interface")
 	] 
-#line 51 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdetector.h"
+#line 51 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdetector.h"
 	dispinterface _IDTDetectorEvents {
 	properties:
 
@@ -323,7 +325,7 @@ library DTControl
 		uuid(81B889F3-33FC-40CD-A98B-4487723F5A3B),
 		helpstring("DTDetector Class")
 	] 
-#line 69 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdetector.h"
+#line 69 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdetector.h"
 	coclass CDTDetector {
 		interface IDTDetector;
 		[default, source]	interface _IDTDetectorEvents;
@@ -333,7 +335,7 @@ library DTControl
 		uuid(3F2A6451-EC6C-4948-9C07-7764FA64A894),
 		helpstring("_IDTCommanderF3Events Interface")
 	] 
-#line 97 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtcommander.h"
+#line 97 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtcommander.h"
 	dispinterface _IDTCommanderF3Events {
 	properties:
 
@@ -345,7 +347,7 @@ library DTControl
 		uuid(B08859A2-D75E-4B6D-8C13-A80DAD7BA087),
 		helpstring("DTCommanderF3 Class")
 	] 
-#line 114 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtcommander.h"
+#line 114 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtcommander.h"
 	coclass CDTCommanderF3 {
 		interface IDTCommanderF3;
 		[default, source]	interface _IDTCommanderF3Events;
@@ -356,7 +358,7 @@ library DTControl
 		uuid(25874CDE-5C8A-486D-855D-C8DE1FFBEE8A),
 		helpstring("ImageObject Class")
 	] 
-#line 52 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\imageobject.h"
+#line 52 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\imageobject.h"
 	coclass CImageObject {
 		interface IImageObject;
 	};
@@ -365,7 +367,7 @@ library DTControl
 		uuid(CD1AAF81-A669-47B7-94A0-5A2A1FBA4439),
 		helpstring("_IDTDisplayEvents Interface")
 	] 
-#line 73 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 73 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	dispinterface _IDTDisplayEvents {
 	properties:
 
@@ -378,7 +380,7 @@ library DTControl
 		uuid(F984B792-41DB-4D78-95A7-1C80E40938FD),
 		helpstring("DTDisplay Class")
 	] 
-#line 91 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtdisplay.h"
+#line 91 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtdisplay.h"
 	coclass CDTDisplay {
 		interface IDTDisplay;
 		[default, source]	interface _IDTDisplayEvents;
@@ -388,7 +390,7 @@ library DTControl
 		uuid(41BE7653-30F4-461F-87A1-4BAB1F8C8B33),
 		helpstring("_IDTImageEvents Interface")
 	] 
-#line 90 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtimage.h"
+#line 93 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtimage.h"
 	dispinterface _IDTImageEvents {
 	properties:
 
@@ -404,7 +406,7 @@ library DTControl
 		uuid(137E0C10-17BC-4F16-BFFE-5C1E7725C8EA),
 		helpstring("DTImage Class")
 	] 
-#line 113 "c:\\users\\yizheng\\documents\\github\\apponscontrol\\apponsdetector\\dtimage.h"
+#line 116 "c:\\users\\yizheng\\documents\\apponscontrol\\apponsdetector\\dtimage.h"
 	coclass CDTImage {
 		interface IDTImage;
 		[default, source]	interface _IDTImageEvents;

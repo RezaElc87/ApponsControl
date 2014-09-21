@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Fri Apr 04 12:22:48 2014
+/* at Thu Sep 04 14:49:13 2014
  */
 /* Compiler settings for _DTControl.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
@@ -2324,6 +2324,12 @@ EXTERN_C const IID IID_IDTImage;
         virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_arrayCorrectionEnable( 
             /* [in] */ BYTE newVal) = 0;
         
+        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_Revert( 
+            /* [retval][out] */ LONG *pVal) = 0;
+        
+        virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_Revert( 
+            /* [in] */ LONG newVal) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -2553,6 +2559,14 @@ EXTERN_C const IID IID_IDTImage;
             IDTImage * This,
             /* [in] */ BYTE newVal);
         
+        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Revert )( 
+            IDTImage * This,
+            /* [retval][out] */ LONG *pVal);
+        
+        /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Revert )( 
+            IDTImage * This,
+            /* [in] */ LONG newVal);
+        
         END_INTERFACE
     } IDTImageVtbl;
 
@@ -2723,6 +2737,12 @@ EXTERN_C const IID IID_IDTImage;
 
 #define IDTImage_put_arrayCorrectionEnable(This,newVal)	\
     ( (This)->lpVtbl -> put_arrayCorrectionEnable(This,newVal) ) 
+
+#define IDTImage_get_Revert(This,pVal)	\
+    ( (This)->lpVtbl -> get_Revert(This,pVal) ) 
+
+#define IDTImage_put_Revert(This,newVal)	\
+    ( (This)->lpVtbl -> put_Revert(This,newVal) ) 
 
 #endif /* COBJMACROS */
 

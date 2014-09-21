@@ -167,7 +167,14 @@ STDMETHODIMP CDTImage::Open(LONG* b_OK)
 	//Get DTFrameBuffer
 	m_pFrameBuf = m_FrameBufFactory.GetDTFrameBuf(this,m_ImageWidth,m_ImageHeight,m_BytesPerPixel,SubFrameNum);
 	//Apply ImageObejct
-			
+	if(m_bPixelOrderEnable) {
+		m_pFrameBuf->setPixelOrderProcessor(&m_pixelOrderProcessor);
+	} else {
+		m_pFrameBuf->setPixelOrderProcessor(NULL);
+	}
+
+
+
 	HRESULT hr = ::CoCreateInstance(CLSID_IImageObject,NULL,CLSCTX_ALL,IID_IImageObject,(LPVOID*) &m_pImageObject);
 	if(FAILED(hr))
 	{
@@ -512,6 +519,11 @@ void CDTImage::OnDTFrameReady(BYTE* pSrc, DWORD Size)
 	//Ajuadge whther to stop the datasrc
 	//m_FrameNum is the total frame number want to take
 	//if ==0 menas continues untill user stop
+	if(m_revert) {
+		RevertConverter converter;
+		converter.process(m_pImageObject, 0, m_ImageHeight);
+	}
+
 	if(m_dualScanMode) {
 			int boardNum = m_ImageWidth/64; //every board have 64 bits
 			DualToSingleConverter converter(boardNum, 64);
@@ -863,6 +875,8 @@ STDMETHODIMP CDTImage::get_PixelOrderEnable(BYTE* pVal)
 STDMETHODIMP CDTImage::put_PixelOrderEnable(BYTE newVal)
 {
 	m_bPixelOrderEnable = newVal;
+	if(!m_pFrameBuf)
+		return S_OK;
 	if(m_bPixelOrderEnable) {
 		m_pFrameBuf->setPixelOrderProcessor(&m_pixelOrderProcessor);
 	} else {
@@ -971,5 +985,18 @@ STDMETHODIMP CDTImage::put_arrayCorrectionEnable(BYTE newVal)
 	} else {
 		m_pFrameBuf->setArrayProcessor(NULL);
 	}
+	return S_OK;
+}
+
+STDMETHODIMP CDTImage::get_Revert(LONG* pVal)
+{
+	// TODO: Add your implementation code here
+	*pVal = m_revert;
+	return S_OK;
+}
+
+STDMETHODIMP CDTImage::put_Revert(LONG newVal)
+{
+	m_revert = newVal;
 	return S_OK;
 }

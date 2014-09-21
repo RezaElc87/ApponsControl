@@ -251,6 +251,7 @@
       <ImportLibrary>$(OutDir)DTControl.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <PerUserRedirection>true</PerUserRedirection>
+      <IgnoreEmbeddedIDL>false</IgnoreEmbeddedIDL>
     </Link>
     <PostBuildEvent>
       <Message>Performing registration</Message>

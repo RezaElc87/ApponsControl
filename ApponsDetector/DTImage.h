@@ -76,6 +76,9 @@ __interface IDTImage : public IDispatch
 	[id(31)] HRESULT GainArrayCal(void);
 	[propget, id(32)] HRESULT arrayCorrectionEnable([out, retval] BYTE* pVal);
 	[propput, id(32)] HRESULT arrayCorrectionEnable([in] BYTE newVal);
+	[propget, id(33)] HRESULT Revert([out, retval] LONG* pVal);
+	[propput, id(33)] HRESULT Revert([in] LONG newVal);
+
 };
 
 
@@ -152,6 +155,8 @@ public:
 		m_bGainEnable = FALSE;
 		m_bPixelOrderEnable = FALSE;
 		m_arrayCorrectionEnable = FALSE;
+		m_pFrameBuf = NULL;
+		m_revert = 0;
 		for(int i = 0;i<SINK_SIZE;i++)
 			m_SinkArray[i] = NULL;
 	}
@@ -270,6 +275,7 @@ private:
 	ULONG	m_BandWidth;
 	ULONG	m_BytesReceived ;
 	BOOL	m_bExFrameTrigger;
+	LONG   m_revert;
 
 	CDTFrameBufFactory		m_FrameBufFactory;
 	CDTPPacketFactory		m_DTPPacketFactory;
@@ -351,4 +357,6 @@ public:
 	STDMETHOD(GainArrayCal)(void);
 	STDMETHOD(get_arrayCorrectionEnable)(BYTE* pVal);
 	STDMETHOD(put_arrayCorrectionEnable)(BYTE newVal);
+	STDMETHOD(get_Revert)(LONG* pVal);
+	STDMETHOD(put_Revert)(LONG newVal);
 };
