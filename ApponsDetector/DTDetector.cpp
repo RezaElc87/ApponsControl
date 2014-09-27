@@ -170,7 +170,7 @@ STDMETHODIMP CDTDetector::Open(LONG* bOK)
 				m_LastErrID  = EID_UNKNOWN_CMD_CHANNEL;
 				bPortOpened = FALSE;
 		}
-		if(bPortOpened)
+/*		if(bPortOpened)
 		{
 			if(TestConnection())
 			{
@@ -184,7 +184,8 @@ STDMETHODIMP CDTDetector::Open(LONG* bOK)
 		else
 		{
 			*bOK = FALSE;
-		}
+		}*/
+		*bOK = bPortOpened;
 	if(*bOK)
 	{
 		m_bIsOpened = TRUE;

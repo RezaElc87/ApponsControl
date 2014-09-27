@@ -101,8 +101,8 @@ void CDTFrameBuf::AddOneFrameLine(BYTE* pSrc,unsigned int Size,BOOL bLineEnd)
 		try
 		{
     		memcpy(pCurLineAddr,pSrc,cpSize);
-			if(m_pixelOrderProcessor)
-				m_pixelOrderProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
+			//if(m_pixelOrderProcessor)
+			//	m_pixelOrderProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
 			if(m_arrayCorrectionProcessor) {
 				m_arrayCorrectionProcessor->process((WORD*)pCurLineAddr, m_FrameWidth);
 			} else {

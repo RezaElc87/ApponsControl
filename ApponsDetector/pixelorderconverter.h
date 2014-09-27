@@ -20,7 +20,8 @@ protected:
     int pixelNum;
 };
 
-class RevertConverter {
+class RevertConverter
+{
 	void convertLine(WORD* src, int width)
 	{
 		//Low Energy Area. First half part
@@ -37,7 +38,7 @@ class RevertConverter {
 		long height = 0;
 		src->get_Height(&height);
 
-		assert(width == boardNum*pixelNum);
+		//assert(width == boardNum*pixelNum);
 		int i=0;
 		int startline = RowID;
 		int endline = RowID + NumLines;
