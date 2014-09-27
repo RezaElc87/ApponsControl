@@ -102,13 +102,13 @@ public:
         int blockNum = boardNum ;
         //Low Energy Area. First half part
         for(int i=0; i < blockNum/2 ; i++) {
-           // copyBlock(buffer, src, i, i*2);
-			copyBlock(buffer, src, i*2, i);
+            copyBlock(buffer, src, i, i*2);
+			//copyBlock (buffer, src, i*2, i);
         }
         //High Energy Area. Sencond half part
         for(int i = blockNum/2; i < blockNum ; i++) {
-            //copyBlock(buffer, src, i, i*2-blockNum+1);
-			copyBlock(buffer, src, i*2-blockNum+1, i);
+            copyBlock(buffer, src, i, i*2-blockNum+1);
+			//copyBlock(buffer, src, i*2-blockNum+1, i);
         }
 		if(revert) {
 			for(int i=0; i < width; i++) {
